@@ -214,4 +214,5 @@ For further assistance, please refer to the official documentation of [ScyllaDB]
 
 ---
 
-*End of Guide.*
+*BY ABHISHEK SAINI.*
+
