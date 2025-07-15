@@ -118,6 +118,13 @@ ss -tlnp | grep 9042    # Verify Scylla is listening on port 9042
 ```bash
 cqlsh 172.31.92.217 -u scylladb -p password
 ```
+now creating database 
+
+CREATE KEYSPACE employee_db
+WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+DESCRIBE KEYSPACES;
+
 
 ### 6.2 Check Node Status
 
@@ -165,8 +172,11 @@ cd ../../..
 Edit your migration scripts and mappings:
 
 ```bash
-nano migration       # Your migration SQL/script file
 nano migration.json  # Mapping definitions, tables, etc.
+replace all content with this and in ip put your private ip
+Modify the migrations.json
+{
+"database": "cassandra://scylladb:password@172.31.92.217:9042/employee_db"
 ```
 
 ### 8.3 Run Migrations
