@@ -178,6 +178,7 @@ replace all content with this and in ip put your private ip
 Modify the migrations.json
 {
 "database": "cassandra://scylladb:password@172.31.92.217:9042/employee_db"
+}
 ```
 
 ### 8.3 Run Migrations
