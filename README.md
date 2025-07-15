@@ -51,6 +51,7 @@ sudo nano /etc/redis/redis.conf
 Update these entries with your server’s private IP (example: `172.31.92.217`):
 
 bind 172.31.92.217
+
 protected-mode no
 
 ---
