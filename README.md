@@ -39,6 +39,19 @@ sudo systemctl enable --now redis-server
 sudo systemctl status redis-server
 redis-cli ping    # Should respond with: PONG
 ```
+Edit `redis.conf
+
+Open the config file:
+
+```bash
+sudo nano /etc/redis/redis.conf
+
+```
+
+Update these entries with your server’s private IP (example: `172.31.92.217`):
+
+bind 172.31.92.217
+protected-mode no
 
 ---
 
@@ -132,8 +145,18 @@ sudo apt install make -y
 ```bash
 git clone https://github.com/OT-MICROSERVICES/salary-api.git
 cd salary-api
+
 cd src/main/resources
-nano application.yml    # Update DB, Scylla, Redis connection settings
+nano application.yml    # Update DB, Scylla, Redis connection settings with your private ip
+
+cassandra:
+contact-points: 172.31.92.217
+
+redis:
+  host: 172.31.92.217
+
+remove password from redis 
+
 cd ../../..
 ```
 
