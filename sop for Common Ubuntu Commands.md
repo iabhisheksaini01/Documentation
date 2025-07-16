@@ -150,7 +150,7 @@ curl http://localhost:3000             # Curl test
 
 ## 10.  Reboot and Shutdown
 
-### 💻 Commands:
+### Commands:
 ```bash
 sudo reboot
 sudo shutdown now
@@ -170,7 +170,7 @@ vim file.txt           # Edit file with Vim
 
 ---
 
-## 12. 🧹 Clear Cache & Logs
+## 12. Clear Cache & Logs
 
 ###  Commands:
 ```bash
@@ -187,8 +187,4 @@ This SOP provides a practical guide for essential commands on Ubuntu. It improve
 
 ---
 
-## Reference
-
-- [Ubuntu Man Pages](https://manpages.ubuntu.com/)
-- `man <command>` — In-terminal manual page
-- https://ubuntu.com/tutorials
+## By: Abhishek saini
