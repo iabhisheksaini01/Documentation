@@ -2,7 +2,7 @@
 # SOP: Common Ubuntu Commands
 
 ## Objective:
-To provide a detailed list of frequently used Ubuntu commands with their purpose, examples, and best practices. This helps users perform basic system-level tasks efficiently.
+To provide a detailed list of frequently used Ubuntu commands with their detailed purpose, examples, and best practices. This helps users perform basic system-level tasks easily.
 
 ---
 
@@ -62,7 +62,6 @@ apt show docker.io
 ```bash
 uname -a                    # Kernel info
 hostnamectl                 # Host info
-lsb_release -a              # Distribution info
 df -h                       # Disk space
 free -h                     # Memory usage
 uptime                      # System uptime
@@ -115,28 +114,7 @@ chown user:group file                  # Change owner
 
 ---
 
-## 8. Process & Service Management
-
-###  Commands:
-```bash
-ps aux                                 # Show running processes
-top / htop                             # Live process monitor
-kill <pid>                             # Kill process
-sudo systemctl start <service>         # Start service
-sudo systemctl stop <service>          # Stop service
-sudo systemctl status <service>        # Status
-sudo systemctl enable <service>        # Enable at boot
-```
-
-**Example:**
-```bash
-sudo systemctl start nginx
-sudo systemctl status redis-server
-```
-
----
-
-## 9. Networking
+## 8. Networking
 
 ### Commands:
 ```bash
@@ -148,7 +126,7 @@ curl http://localhost:3000             # Curl test
 
 ---
 
-## 10.  Reboot and Shutdown
+## 9. Reboot and Shutdown
 
 ### Commands:
 ```bash
@@ -158,7 +136,7 @@ sudo shutdown now
 
 ---
 
-## 11. File Viewing & Editing
+## 10. File Viewing & Editing
 
 ###  Commands:
 ```bash
@@ -170,7 +148,7 @@ vim file.txt           # Edit file with Vim
 
 ---
 
-## 12. Clear Cache & Logs
+## 11. Clear Cache & Logs
 
 ###  Commands:
 ```bash
