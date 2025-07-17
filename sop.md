@@ -162,5 +162,3 @@ vim script.sh
 
 ---
 
-## Conclusion
-This SOP outlines the most common Ubuntu commands required for daily administrative tasks. It is designed to help both beginners and experienced users operate systems efficiently and confidently.
