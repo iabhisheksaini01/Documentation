@@ -1,5 +1,5 @@
 
-# SOP: Common Ubuntu Commands
+# SOP forCommon Ubuntu Commands
 
 ## Author Information
 
@@ -29,7 +29,7 @@
 
 
 ## Objective:
-To provide a detailed list of frequently used Ubuntu commands with their detailed purpose, examples, and best practices. This helps users perform basic system-level tasks easily.
+To provide a detailed list of frequently used Ubuntu commands with their detailed purpose and examples, This helps users perform basic system-level tasks easily.
 
 ---
 
