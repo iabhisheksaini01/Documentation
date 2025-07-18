@@ -7,6 +7,18 @@
 | Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
 
 ---
+## Table of Contents
+
+| S.No | Section                             | Description                                             |
+|------|-------------------------------------|---------------------------------------------------------|
+| 1    | [System Information](#system-information)            | Commands to get system info like kernel, memory, disk    |
+| 2    | [User Management](#user-management)                  | Add, remove, or modify users and groups                 |
+| 3    | [Directory & File Operations](#directory--file-operations) | Basic file and directory commands                   |
+| 4    | [Permission & Ownership](#permission--ownership)     | Manage file permissions and ownership                   |
+| 5    | [Networking](#networking)                            | View IPs, test connectivity, and network tools           |
+| 6    | [Reboot and Shutdown](#reboot-and-shutdown)          | Commands to restart or power off the system             |
+| 7    | [File Viewing & Editing](#file-viewing--editing)     | Tools to view and edit files                            |
+
 
 
 ## Objective
