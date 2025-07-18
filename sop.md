@@ -1,5 +1,14 @@
 # SOP for Common Ubuntu Commands
 
+## Author Information
+
+| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
+
+---
+
+
 ## Objective
 To provide a detailed list of frequently used Ubuntu commands with their descriptions, examples, and best practices. This SOP helps the users to perform basic system tasks effectively on Ubuntu systems.
 
@@ -161,4 +170,23 @@ vim script.sh
 ```
 
 ---
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | [abhishek.saini.snaatak@mygurukulam.co |
+
+---
+
+## References
+
+| **Link**                                                                 | **Description**                                   |
+|--------------------------------------------------------------------------|---------------------------------------------------|
+| [Linux common commands– ](https://www.digitalocean.com/community/tutorials/linux-commands) | Document format followed from this link.          |
+
+
+
+
+## Contributor
+## By: Abhishek saini
 
