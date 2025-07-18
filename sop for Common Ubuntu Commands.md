@@ -3,7 +3,7 @@
 
 ## Author Information
 
-| Created by      | Created on         | Version          | Last updated by   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
 | Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
 
@@ -132,7 +132,7 @@ mv oldname.txt newname.txt             # Rename/move file
 
 ## 7. Permission & Ownership
 
-### 💻 Commands:
+###  Commands:
 ```bash
 chmod +x script.sh                     # Add execute permission
 chmod 755 file                         # Set permission
