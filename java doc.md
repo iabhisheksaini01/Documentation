@@ -1,4 +1,4 @@
-# Java In-Depth Documentation
+# Documentation on Java
 
 ## Table of Contents
 1. [Overview](#1-overview)  
