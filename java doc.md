@@ -1,6 +1,6 @@
 # Documentation on Java
 
-# Table of Contents
+## Table of Contents
 
 | Section No. | Title | Description |
 |-------------|-------|-------------|
@@ -44,25 +44,25 @@ Java has grown to become the foundation for many large-scale applications, Andro
 
 ## 3. Core Features of Java
 
-### ✦ Platform Independence
+### • Platform Independence
 Compiled Java code (`.class`) runs on any OS with a JVM. This decouples the source code from underlying hardware or OS.
 
-### ✦ Object-Oriented Programming
+### • Object-Oriented Programming
 Java is based on OOP concepts: **abstraction, encapsulation, inheritance, polymorphism**.
 
-### ✦ Strong Memory Management
+### • Strong Memory Management
 Includes **automatic garbage collection** and no direct pointer manipulation, reducing memory leaks.
 
-### ✦ Multithreading Support
+### • Multithreading Support
 Enables concurrent execution using `Thread`, `Runnable`, and advanced concurrency APIs in `java.util.concurrent`.
 
-### ✦ Secure
+### • Secure
 Features like **bytecode verification**, **security manager**, and **exception handling** make Java suitable for secure applications.
 
-### ✦ Rich Standard API
+### • Rich Standard API
 Prebuilt packages for **data structures, networking, file I/O, math, date/time, JDBC**, etc.
 
-### ✦ Robust and Reliable
+### • Robust and Reliable
 Java performs compile-time and runtime checks, and it handles exceptions gracefully.
 
 ---
@@ -73,12 +73,12 @@ Java performs compile-time and runtime checks, and it handles exceptions gracefu
 [.java file] → javac → [.class bytecode] → JVM → [Native Machine Code]
 ```
 
-### Components:
+### Components
 - **JDK (Java Development Kit)**: Compiler, debugger, tools, JRE.
 - **JRE (Java Runtime Environment)**: JVM + standard class libraries.
 - **JVM (Java Virtual Machine)**: Executes bytecode, provides memory management, and OS abstraction.
 
-### JVM Internals:
+### JVM Internals
 - **Class Loader**: Loads classes dynamically.
 - **Memory Areas**:
   - Heap (objects)
@@ -107,7 +107,8 @@ public class HelloWorld {
 
 ## 6. Data Types & Variables
 
-### Primitive Types:
+### Primitive Types
+
 | Type    | Size     | Example         |
 |---------|----------|------------------|
 | `int`   | 4 bytes  | `int age = 30;`  |
@@ -115,7 +116,7 @@ public class HelloWorld {
 | `char`  | 2 bytes  | `char c = 'A';`  |
 | `boolean`| 1 bit   | `boolean flag = true;` |
 
-### Reference Types:
+### Reference Types
 Arrays, Strings, custom objects, etc.
 
 ---
@@ -151,7 +152,6 @@ do {
 ## 8. Object-Oriented Programming (OOP)
 
 ### Abstraction
-Hide complex logic and expose essential features:
 ```java
 abstract class Animal {
     abstract void makeSound();
@@ -159,7 +159,7 @@ abstract class Animal {
 ```
 
 ### Encapsulation
-Use `private` variables + `public` methods to protect internal state.
+Use `private` variables and `public` getter/setter methods to protect internal state.
 
 ### Inheritance
 ```java
@@ -204,83 +204,82 @@ class InvalidAgeException extends Exception {
 
 ## 10. Common Java APIs
 
-| Package         | Description                              |
-|------------------|------------------------------------------|
-| `java.lang`      | Core types (`String`, `Math`, `Object`)  |
-| `java.util`      | Collections, dates, utilities            |
-| `java.io`        | File and stream handling                 |
-| `java.nio`       | Non-blocking I/O                         |
-| `java.net`       | Sockets, URLs, HTTP                      |
-| `java.sql`       | JDBC database access                     |
-| `java.util.concurrent` | Multithreading & async APIs     |
+| Package               | Description                             |
+|------------------------|-----------------------------------------|
+| `java.lang`            | Core types like `String`, `Math`, etc.  |
+| `java.util`            | Collections, dates, utilities           |
+| `java.io`              | File and stream handling                |
+| `java.nio`             | Non-blocking I/O                        |
+| `java.net`             | Sockets, URLs, HTTP                     |
+| `java.sql`             | JDBC for database operations            |
+| `java.util.concurrent` | Thread-safe concurrent utilities        |
 
 ---
 
 ## 11. Development Tools
 
-- **IDEs**: IntelliJ IDEA, Eclipse, NetBeans
-- **Build Tools**: Maven, Gradle
-- **Testing**: JUnit, TestNG
-- **Version Control**: Git
-- **Documentation**: Javadoc
+- IntelliJ IDEA
+- Eclipse
+- NetBeans
+- Maven
+- Gradle
+- JUnit / TestNG
+- Git
+- Javadoc
 
 ---
 
 ## 12. Real-World Use Cases
 
-### ➤ Enterprise Applications
-Java EE or Jakarta EE for enterprise-scale applications with EJBs, JSP, Servlets.
+### • Enterprise Applications
+Using Java EE / Jakarta EE for large-scale, secure, maintainable applications.
 
-### ➤ Android Development
-Core language for native Android apps (superseded by Kotlin now, but still widely supported).
+### • Android Development
+Used extensively for Android before Kotlin became preferred.
 
-### ➤ Web Backends
-Spring Boot for REST APIs, authentication, databases, etc.
+### • Web Backends
+Frameworks like Spring Boot for building RESTful APIs and microservices.
 
-### ➤ Big Data
-Java is used in Hadoop, Apache Kafka, Spark for large-scale data processing.
+### • Big Data
+Java used in Apache Hadoop, Kafka, and Spark for large-scale processing.
 
-### ➤ Embedded Systems
-Java ME for limited-resource devices like POS terminals, embedded sensors.
+### • Embedded Systems
+Java ME for low-resource environments like sensors and terminals.
 
-### ➤ Financial Services
-Banking systems use Java for security, scalability, and reliability.
+### • Financial Services
+Java's performance and reliability suit transaction-heavy apps.
 
-### ➤ Cloud & Microservices
-Spring Cloud, Quarkus, and Micronaut frameworks for containerized deployments on Kubernetes.
+### • Cloud & Microservices
+Spring Cloud and Quarkus used for container-ready microservices.
 
 ---
 
 ## 13. Getting Started with Java
 
-### Install Java:
-- Download JDK from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://jdk.java.net)
+### Installation
+- Download from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://jdk.java.net)
 
-### Setup:
-1. Set `JAVA_HOME`
-2. Add `JAVA_HOME/bin` to system PATH
-3. Test with:
-```bash
-java -version
-javac -version
-```
+### Setup
+- Set environment variable `JAVA_HOME`
+- Add `$JAVA_HOME/bin` to system `PATH`
 
-### Compile & Run:
+### Compile and Run
 ```bash
 javac HelloWorld.java
 java HelloWorld
 ```
 
-### Using IntelliJ:
-- Create a project → Add class → Write code → Run using the green play button.
+### Using IntelliJ IDEA
+- New project → Create Java class → Write code → Run
 
 ---
 
 ## 14. Further Reading
-- [Official Java Tutorials (Oracle)](https://docs.oracle.com/javase/tutorial/)
+
+- [Oracle Java Documentation](https://docs.oracle.com/en/java/)
 - *Effective Java* by Joshua Bloch
 - *Java Concurrency in Practice* by Brian Goetz
-- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [Spring Boot Docs](https://spring.io/projects/spring-boot)
 
 ---
 
