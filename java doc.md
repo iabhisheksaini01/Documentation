@@ -2,9 +2,9 @@
 
 ## Author Information
 
-| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+| Created by      | Created on         | Version          | Last updated on   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka       |      Rishabh sharma  |   piyush upadhyay |
 
 ---
 
@@ -183,7 +183,6 @@ class Dog extends Animal {
 Animal a = new Dog();
 a.makeSound(); // Bark (runtime method dispatch)
 ```
-
 ---
 
 ## 9. Error Handling
@@ -239,26 +238,15 @@ class InvalidAgeException extends Exception {
 
 ## 12. Real-World Use Cases
 
-### • Enterprise Applications
-Using Java EE / Jakarta EE for large-scale, secure, maintainable applications.
-
-### • Android Development
-Used extensively for Android before Kotlin became preferred.
-
-### • Web Backends
-Frameworks like Spring Boot for building RESTful APIs and microservices.
-
-### • Big Data
-Java used in Apache Hadoop, Kafka, and Spark for large-scale processing.
-
-### • Embedded Systems
-Java ME for low-resource environments like sensors and terminals.
-
-### • Financial Services
-Java's performance and reliability suit transaction-heavy apps.
-
-### • Cloud & Microservices
-Spring Cloud and Quarkus used for container-ready microservices.
+| **Use Case**             | **Description**                                                                 |
+|--------------------------|---------------------------------------------------------------------------------|
+| **Enterprise Applications** | Java EE / Jakarta EE used for secure, large-scale, and maintainable systems.     |
+| **Android Development**     | Java was the primary language for Android apps before Kotlin became dominant.     |
+| **Web Backends**            | Frameworks like **Spring Boot** are widely used to develop RESTful APIs.         |
+| **Big Data**                | Java is used in **Hadoop**, **Kafka**, **Spark** for distributed data processing. |
+| **Embedded Systems**        | Java ME (Micro Edition) runs on resource-constrained devices like IoT sensors.    |
+| **Financial Services**      | Java’s stability and speed make it ideal for fintech apps and payment gateways.  |
+| **Cloud & Microservices**   | Libraries like **Spring Cloud**, **Quarkus** power container-ready deployments.  |
 
 ---
 
@@ -298,6 +286,7 @@ java HelloWorld
 - New project → Create Java class → Write code → Run
 
 ---
+
 ## Contact Information
 
 | **Name**           | **Email address**                         |
