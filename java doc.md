@@ -264,8 +264,26 @@ Spring Cloud and Quarkus used for container-ready microservices.
 
 ## 13. Getting Started with Java
 
-### Installation
+### Installation  
+You can install Java on your system via the official downloads or using your OS package manager.
+
+- Manual download options:
 - Download from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://jdk.java.net)
+
+---
+
+### 13.1 Ubuntu Installation via CLI
+
+Follow the steps below to install Java on Ubuntu using the terminal:
+
+#### Step 1: Update the package index
+```bash
+sudo apt update
+```
+#### Step 2: Install OpenJDK 17
+```bash
+sudo apt install openjdk-17-jdk -y
+```
 
 ### Setup
 - Set environment variable `JAVA_HOME`
