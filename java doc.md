@@ -1,7 +1,7 @@
 # Java Introduction Documentation
 
 ## Table of Contents
-1. [Overview](#overview)  
+1. [Overview](overview)  
 2. [History](#history)  
 3. [Key Features](#key-features)  
 4. [Java Architecture](#java-architecture)  
