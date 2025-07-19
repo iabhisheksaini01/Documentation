@@ -1,20 +1,23 @@
 # Documentation on Java
 
-## Table of Contents
-1. [Overview](#1-overview)  
-2. [History of Java](#2-history-of-java)  
-3. [Core Features of Java](#3-core-features-of-java)  
-4. [Java Architecture](#4-java-architecture)  
-5. [Basic Syntax & Structure](#5-basic-syntax--structure)  
-6. [Data Types & Variables](#6-data-types--variables)  
-7. [Control Structures](#7-control-structures)  
-8. [Object-Oriented Programming (OOP)](#8-object-oriented-programming-oop)  
-9. [Error Handling](#9-error-handling)  
-10. [Common Java APIs](#10-common-java-apis)  
-11. [Development Tools](#11-development-tools)  
-12. [Real-World Use Cases](#12-real-world-use-cases)  
-13. [Getting Started with Java](#13-getting-started-with-java)  
-14. [Further Reading](#14-further-reading)
+# Table of Contents
+
+| Section No. | Title | Description |
+|-------------|-------|-------------|
+| 1 | [Overview](#1-overview) | General introduction to Java and its core purpose. |
+| 2 | [History of Java](#2-history-of-java) | Evolution of Java from 1991 to present. |
+| 3 | [Core Features of Java](#3-core-features-of-java) | Key features like OOP, platform independence, etc. |
+| 4 | [Java Architecture](#4-java-architecture) | Components like JVM, JDK, JRE, and how Java runs. |
+| 5 | [Basic Syntax & Structure](#5-basic-syntax--structure) | Structure of a simple Java program. |
+| 6 | [Data Types & Variables](#6-data-types--variables) | Primitive and reference data types used in Java. |
+| 7 | [Control Structures](#7-control-structures) | Conditional and looping constructs in Java. |
+| 8 | [Object-Oriented Programming (OOP)](#8-object-oriented-programming-oop) | Principles like inheritance, polymorphism, etc. |
+| 9 | [Error Handling](#9-error-handling) | Handling exceptions with try-catch-finally. |
+| 10 | [Common Java APIs](#10-common-java-apis) | Key packages and their use in Java programming. |
+| 11 | [Development Tools](#11-development-tools) | IDEs, build tools, and utilities for Java development. |
+| 12 | [Real-World Use Cases](#12-real-world-use-cases) | Where and how Java is used in real applications. |
+| 13 | [Getting Started with Java](#13-getting-started-with-java) | Installation, setup, and basic usage instructions. |
+| 14 | [Further Reading](#14-further-reading) | Recommended books and official resources. |
 
 ---
 
