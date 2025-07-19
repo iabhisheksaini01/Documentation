@@ -269,10 +269,9 @@ You can install Java on your system via the official downloads or using your OS 
 
 - Manual download options:
 - Download from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://jdk.java.net)
+  
 
----
-
-### 13.1 Ubuntu Installation via CLI
+### Ubuntu Installation via CLI
 
 Follow the steps below to install Java on Ubuntu using the terminal:
 
