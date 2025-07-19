@@ -290,9 +290,10 @@ java HelloWorld
 
 ## References
 
+
 | **Link**                                                                 | **Description**                                   |
 |--------------------------------------------------------------------------|---------------------------------------------------|
-| [Linux common commands– ]([https://www.digitalocean.com/community/tutorials/linux-commands](https://www.oracle.com/java/technologies/javase/jdk24-readme-downloads.html)) | Document format followed from this link.          |
+| [Java intro ](https://www.oracle.com/java/technologies/javase/jdk24-readme-downloads.html) | Document format followed from this link.          |
 
 
 ---
