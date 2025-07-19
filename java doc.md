@@ -1,5 +1,13 @@
 # Documentation on Java
 
+## Author Information
+
+| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
+
+---
+
 ## Table of Contents
 
 | Section No. | Title | Description |
@@ -273,15 +281,18 @@ java HelloWorld
 - New project → Create Java class → Write code → Run
 
 ---
+## Contact Information
 
-## 14. Further Reading
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | [abhishek.saini.snaatak@mygurukulam.co |
 
-- [Oracle Java Documentation](https://docs.oracle.com/en/java/)
-- *Effective Java* by Joshua Bloch
-- *Java Concurrency in Practice* by Brian Goetz
-- [Spring Boot Docs](https://spring.io/projects/spring-boot)
+
+## References
+
+| **Link**                                                                 | **Description**                                   |
+|--------------------------------------------------------------------------|---------------------------------------------------|
+| [Linux common commands– ]([https://www.digitalocean.com/community/tutorials/linux-commands](https://www.oracle.com/java/technologies/javase/jdk24-readme-downloads.html)) | Document format followed from this link.          |
+
 
 ---
-
-*Prepared by Technical Documentation Writer Pro*  
-*Date: 2025-07-19*
