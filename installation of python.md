@@ -1,13 +1,22 @@
 # Python Installation Automation Script
 
+## Author Information
+
+| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
+
+---
+
+
 ![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
 
-A bash script to automate Python installation on Ubuntu systems using two methods:
+## A Bash script to automate Python installation on Ubuntu systems using two methods:
 
 - Package Manager (via APT + deadsnakes PPA)
 - Tarball (from source using `make altinstall`)
 
-It also configures and manages multiple Python versions using `update-alternatives`.
+######     It also configures and manages multiple Python versions using `update-alternatives`.
 
 ---
 
@@ -16,7 +25,7 @@ It also configures and manages multiple Python versions using `update-alternativ
 - [Introduction](#introduction)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
-- [Script](#script)
+- [Bash Script](#bash-script)
 - [Basic Usage](#basic-usage)
 - [Supported Python Versions](#supported-python-versions)
 
@@ -54,8 +63,8 @@ Make sure your system has the following:
 
 ---
 
-## Script
-
+## Bash Script
+ install_python.sh
 ```bash
 #!/bin/bash
 
@@ -145,3 +154,51 @@ sudo update-alternatives --display python3
 echo
 echo "Current default python3 version: $(python3 --version)"
 ```
+---
+## Basic Usage
+
+```bash
+chmod +x install_python.sh
+```
+- Grants execute permission to the script
+
+---
+```bash
+./install_python.sh
+```
+- This installs selected Python version via Package Manager or Tarball
+- Also registers the version using `update-alternatives`
+
+---
+
+## Supported Python Versions
+
+| Python Version | Status     |
+|----------------|------------|
+| 3.8            | Supported  |
+| 3.9            | Supported  |
+| 3.10           | Supported  |
+| 3.11           | Supported  |
+| 3.12           | Supported  |
+
+---
+
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | [abhishek.saini.snaatak@mygurukulam.co |
+
+---
+
+## References
+
+| **Link**                                                                 | **Description**                                   |
+|--------------------------------------------------------------------------|---------------------------------------------------|
+| [Linux common commands– ](https://www.digitalocean.com/community/tutorials/linux-commands) | Document format followed from this link.          |
+
+
+
+
+## 👥 Contributor
+## By: Abhishek saini
