@@ -195,10 +195,3 @@ vim script.sh
 | **Link**                                                                 | **Description**                                   |
 |--------------------------------------------------------------------------|---------------------------------------------------|
 | [Linux common commands– ](https://www.digitalocean.com/community/tutorials/linux-commands) | Document format followed from this link.          |
-
-
-
-
-## Contributor
-## By: Abhishek saini
-
