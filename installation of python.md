@@ -2,7 +2,7 @@
 
 ## Author Information
 
-| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+| Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
 | Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
 
@@ -195,7 +195,7 @@ chmod +x install_python.sh
 
 | **Link**                                                                 | **Description**                                   |
 |--------------------------------------------------------------------------|---------------------------------------------------|
-| [Linux common commands– ](https://www.digitalocean.com/community/tutorials/linux-commands) | Document format followed from this link.          |
+| [Python installation guide– ](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu) | Document format followed from this link.          |
 
 
 
