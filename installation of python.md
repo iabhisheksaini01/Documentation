@@ -58,7 +58,6 @@ Make sure your system has the following:
 
 - Ubuntu 20.04/22.04 or equivalent
 - `sudo` access
-- Internet connection
 - `build-essential`, `wget`, `curl`, and necessary Python build dependencies
 
 ---
