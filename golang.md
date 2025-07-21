@@ -28,7 +28,6 @@ This Bash script provides an interactive utility to install or upgrade **Go (Gol
 
 - Ubuntu or Debian-based Linux distribution
 - `sudo` privileges
-- Internet connection (for tarball or APT-based installation)
 
 ---
 
