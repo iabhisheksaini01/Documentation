@@ -187,7 +187,7 @@ chmod +x install_python.sh
 
 | **Name**           | **Email address**                         |
 |--------------------|--------------------------------------------|
-| Abhishek saini    | [abhishek.saini.snaatak@mygurukulam.co |
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
 
 ---
 
