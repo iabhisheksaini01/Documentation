@@ -24,9 +24,7 @@
 7. [Sample GitLab CI Configuration](#sample-gitlab-ci-configuration)  
 8. [Recommended Practices](#recommended-practices)  
 9. [Common Issues & Fixes](#common-issues--fixes)  
-10. [Useful Resources](#useful-resources)  
-11. [Contact Info](#contact-info)  
-12. [Summary](#summary)
+10. [Summary](#summary)
 
 ---
 
@@ -150,15 +148,15 @@ molecule-test:
 
 ##  Recommended Practices <a id="recommended-practices"></a>
 
-- 🔸 Keep test cases simple and reproducible  
-- 🔸 Validate **idempotency** in each scenario  
-- 🔸 Always maintain an up-to-date `README.md`  
-- 🔸 Follow naming conventions aligned with Ansible Galaxy  
-- 🔸 Isolate variables and avoid hardcoding  
+-  Keep test cases simple and reproducible  
+-  Validate **idempotency** in each scenario  
+-  Always maintain an up-to-date `README.md`  
+-  Follow naming conventions aligned with Ansible Galaxy  
+- Isolate variables and avoid hardcoding  
 
 ---
 
-## 🛠Common Issues & Fixes <a id="common-issues--fixes"></a>
+## Common Issues & Fixes <a id="common-issues--fixes"></a>
 
 | Issue                         | Suggestion                                                                 |
 |------------------------------|----------------------------------------------------------------------------|
@@ -168,15 +166,11 @@ molecule-test:
 | CI pipeline timeout          | Use optimized base images and reduce network dependencies                  |
 
 ---
+##  Summary <a id="summary"></a>
 
-## Useful Resources <a id="useful-resources"></a>
-
-- []()  
--    
--  
+Adopting CI pipelines for Ansible roles not only improves code reliability but also enhances team collaboration and delivery speed. This guide provides a detailed blueprint to implement and maintain a CI pipeline using `ansible-lint`, `molecule`, and GitLab CI. Following this approach will help ensure consistent, high-quality infrastructure automation.
 
 ---
-
 ## Contact Information
 
 | **Name**           | **Email address**                         |
@@ -194,6 +188,4 @@ molecule-test:
 | [GitLab CI Documentation](https://docs.gitlab.com/ee/ci/) | Document format followed from this link.          |
 ---
 
-##  Summary <a id="summary"></a>
 
-Adopting CI pipelines for Ansible roles not only improves code reliability but also enhances team collaboration and delivery speed. This guide provides a detailed blueprint to implement and maintain a CI pipeline using `ansible-lint`, `molecule`, and GitLab CI. Following this approach will help ensure consistent, high-quality infrastructure automation.
