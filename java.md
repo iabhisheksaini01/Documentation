@@ -1,139 +1,305 @@
-# Java Introduction
+# Documentation on Java
 
-# SOP Table – Java Introduction Documentation
+## Author Information
 
-| S.No | Section             | Objective                                             | Description                                                                                     | Remarks                          |
-|------|---------------------|-------------------------------------------------------|-------------------------------------------------------------------------------------------------|----------------------------------|
-| 1    | Introduction         | Basic understanding of Java                          | Explains what Java is, its purpose, and why it is used across industries                       | Keep it concise and readable    |
-| 2    | History              | Understand Java’s origin and evolution               | Covers Java’s development from 1991 till present, including key milestones                     | Include relevant years and facts|
-| 3    | Key Features         | Highlight major capabilities of Java                | Lists features like Platform Independence, OOP, Security, Robustness, etc.                     | Use simple terms for clarity    |
-| 4    | Use Cases            | Show where Java is used in real-world applications   | Describes usage in Web, Mobile, Enterprise, Cloud, IoT, etc.                                   | Add 6–8 practical use cases     |
-| 5    | Key Milestones       | Timeline of important Java versions and changes      | Extended chronological view from Java 1.0 to latest LTS versions                               | Present in clear bullet points  |
-| 6    | Conclusion           | Summarize the importance and future of Java          | Highlights why Java remains relevant and powerful in modern development                        | Keep it motivational and brief  |
-| 7    | References           | Acknowledge information sources                      | Provides links to official documentation and credible sources                                  | Keep them updated               |
-| 8    | Author Info          | Mention documentation creator                        | Lists name, date, purpose, and contact email                                                   | For internal documentation use  |
-
-
-## 🔹 What is Java?
-
-Java is a **high-level, object-oriented programming language** used to build a wide range of applications – from desktop and mobile apps to enterprise systems and web applications. It was designed to be **simple, secure, and platform-independent**, meaning you can write code once and run it anywhere using the Java Virtual Machine (JVM).
+| Created by      | Created on         | Version          | Last updated on   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka       |      Rishabh sharma  |   piyush upadhyay |
 
 ---
 
-## History of Java
+## Table of Contents
 
-Java was created in **1991** by **James Gosling** and his team at **Sun Microsystems** as part of a project called "Green". The language was first called **Oak**, but later renamed to **Java** in 1995.
-
-# Key Milestones in Java’s Journey
-
-- **1991 – Project Initiation:**  
-  Java was first conceived by **James Gosling** and his team at Sun Microsystems under the project name **“Green”**. The aim was to develop a platform-independent language for embedded systems and interactive television.
-
-- **1995 – Official Release of Java 1.0:**  
-  Sun Microsystems officially launched **Java 1.0**, promoting its key principle:  
-  *“Write Once, Run Anywhere”*. It gained quick popularity for building secure and portable applications.
-
-- **1998 – Java 2 (J2SE 1.2):**  
-  Java was rebranded as **Java 2**, introducing a more modular structure, Swing for GUI development, and enhanced performance features. This version laid the foundation for modern Java.
-
-- **2004 – Java 5 (Tiger):**  
-  Major updates like **Generics**, **Metadata (Annotations)**, **Enhanced for-loop**, and **Autoboxing** were added, improving language capabilities and developer productivity.
-
-- **2006 – Java becomes Open Source (OpenJDK):**  
-  Sun released Java as **OpenJDK**, the official open-source implementation. This opened doors for community-driven innovation and wider adoption.
-
-- **2010 – Oracle Acquires Sun Microsystems:**  
-  Oracle Corporation took over Java’s development after acquiring Sun Microsystems. They introduced structured release cycles and long-term support (LTS) versions.
-
-- **2014 – Java 8 Release:**  
-  One of the most impactful updates, **Java 8** brought **Lambda expressions**, **Streams API**, **Functional interfaces**, and **Date-Time API**. It marked Java’s shift toward functional programming.
-
-- **2017 – Java 9 & New Release Model:**  
-  Introduction of **Project Jigsaw (Modular System)** and the start of a new **six-month release cycle**, making Java more agile and modern.
-
-- **2018 – Java 11 (LTS):**  
-  The first long-term support version under Oracle’s new strategy. It removed outdated components (like Applets) and focused on performance and simplicity.
-
-- **2021 – Java 17 (LTS):**  
-  Added modern features like **Sealed Classes**, **Pattern Matching**, and performance improvements. Adopted as a reliable LTS version for enterprise use.
-
-- **2023 & Beyond – Modern Java:**  
-  Java continues to evolve with versions like **Java 21**, focusing on performance, developer productivity, and cloud-native development. New features such as **Virtual Threads** (Project Loom) and **Record Patterns** have made Java even more powerful and scalable.
-
-> Today, Java is actively maintained and widely used in **enterprise systems**, **Android development**, **web backends**, **financial institutions**, and **cloud-native architectures**.
-
+| Section No. | Title | Description |
+|-------------|-------|-------------|
+| 1 | [Overview](#1-overview) | General introduction to Java and its core purpose. |
+| 2 | [History of Java](#2-history-of-java) | Evolution of Java from 1991 to present. |
+| 3 | [Core Features of Java](#3-core-features-of-java) | Key features like OOP, platform independence, etc. |
+| 4 | [Java Architecture](#4-java-architecture) | Components like JVM, JDK, JRE, and how Java runs. |
+| 5 | [Basic Syntax & Structure](#5-basic-syntax--structure) | Structure of a simple Java program. |
+| 6 | [Data Types & Variables](#6-data-types--variables) | Primitive and reference data types used in Java. |
+| 7 | [Control Structures](#7-control-structures) | Conditional and looping constructs in Java. |
+| 8 | [Object-Oriented Programming (OOP)](#8-object-oriented-programming-oop) | Principles like inheritance, polymorphism, etc. |
+| 9 | [Error Handling](#9-error-handling) | Handling exceptions with try-catch-finally. |
+| 10 | [Common Java APIs](#10-common-java-apis) | Key packages and their use in Java programming. |
+| 11 | [Development Tools](#11-development-tools) | IDEs, build tools, and utilities for Java development. |
+| 12 | [Real-World Use Cases](#12-real-world-use-cases) | Where and how Java is used in real applications. |
+| 13 | [Getting Started with Java](#13-getting-started-with-java) | Installation, setup, and basic usage instructions. |
+| 14 | [Further Reading](#14-further-reading) | Recommended books and official resources. |
 
 ---
 
-##  Key Features of Java
-
-Java is popular because of its strong and useful features:
-
-| Feature                | Description |
-|------------------------|-------------|
-| **Platform Independent** | Java programs run on any system using JVM (Write Once, Run Anywhere). |
-| **Object-Oriented**       | Focuses on objects and reusable code. |
-| **Simple Syntax**         | Easy to read and similar to C/C++. |
-| **Secure**                | Built-in security features and no direct memory access. |
-| **Robust**                | Automatic memory management and error handling. |
-| **Multithreading**        | Can perform multiple tasks at once. |
-| **High Performance**      | Fast execution using Just-In-Time (JIT) compiler. |
-| **Rich APIs & Libraries** | Offers a wide range of built-in functions and external libraries. |
-| **Dynamic and Extensible**| Classes can be loaded and used at runtime. |
+## 1. Overview
+Java is a **general-purpose**, **object-oriented**, **class-based** programming language that enables developers to build **platform-independent** applications. Java programs are compiled into **bytecode**, which is executed by the **Java Virtual Machine (JVM)**. This allows Java applications to run on any system that has a compatible JVM, embodying the principle **"Write Once, Run Anywhere"**.
 
 ---
 
-## 🧰 Common Use Cases of Java
+## 2. History of Java
 
-Java is used in many industries and applications due to its reliability and scalability:
+| Year | Milestone |
+|------|-----------|
+| 1991 | Started as "Oak" by James Gosling at Sun Microsystems for interactive television. |
+| 1995 | Renamed to **Java** and officially released with Java 1.0. |
+| 1998 | Java 2 (J2SE) released, introducing the Swing GUI toolkit, Collections Framework, etc. |
+| 2004 | Java 5 introduces generics, metadata annotations, enhanced for-loop. |
+| 2010 | **Oracle** acquires Sun Microsystems, becoming the official maintainer of Java. |
+| 2017 | Java SE 9 introduces modules (`Project Jigsaw`). |
+| 2018+ | New release cadence: major versions every 6 months (Java 11, Java 17 are LTS). |
 
-1. **Web Applications**
-   - Java is used with frameworks like Spring, JSP, and Servlets.
-   - Example: Online shopping, banking portals.
-
-2. **Mobile Applications**
-   - Java is the base for Android development.
-   - Example: Many Android apps are built using Java.
-
-3. **Enterprise Applications**
-   - Large business systems (ERP, CRM) use Java EE technologies.
-
-4. **Desktop Applications**
-   - GUI apps built with JavaFX and Swing.
-   - Example: IDEs like IntelliJ IDEA and Eclipse.
-
-5. **Cloud Applications**
-   - Java is used to build scalable services for AWS, Azure, and GCP.
-
-6. **APIs and Microservices**
-   - Java (especially with Spring Boot) is widely used to create RESTful services.
-
-7. **Big Data Tools**
-   - Technologies like Hadoop and Kafka are Java-based.
-
-8. **IoT Devices**
-   - Java Micro Edition (Java ME) is used in smart cards, sensors, etc.
+Java has grown to become the foundation for many large-scale applications, Android development, cloud services, and more.
 
 ---
 
-## Conclusion
+## 3. Core Features of Java
 
-Java is a **trusted and versatile programming language** used by developers worldwide. Its platform independence, security features, and large community support make it a solid choice for building **modern and scalable applications**.
+### • Platform Independence
+Compiled Java code (`.class`) runs on any OS with a JVM. This decouples the source code from underlying hardware or OS.
+
+### • Object-Oriented Programming
+Java is based on OOP concepts: **abstraction, encapsulation, inheritance, polymorphism**.
+
+### • Strong Memory Management
+Includes **automatic garbage collection** and no direct pointer manipulation, reducing memory leaks.
+
+### • Multithreading Support
+Enables concurrent execution using `Thread`, `Runnable`, and advanced concurrency APIs in `java.util.concurrent`.
+
+### • Secure
+Features like **bytecode verification**, **security manager**, and **exception handling** make Java suitable for secure applications.
+
+### • Rich Standard API
+Prebuilt packages for **data structures, networking, file I/O, math, date/time, JDBC**, etc.
+
+### • Robust and Reliable
+Java performs compile-time and runtime checks, and it handles exceptions gracefully.
 
 ---
 
-##  Author
+## 4. Java Architecture
 
-**Prepared by:** Abhishek Saini  
-**Date:** July 2025  
-**For:** Official Java Documentation  
-**Contact:** abhishek.saini@example.com
+```text
+[.java file] → javac → [.class bytecode] → JVM → [Native Machine Code]
+```
+
+### Components
+- **JDK (Java Development Kit)**: Compiler, debugger, tools, JRE.
+- **JRE (Java Runtime Environment)**: JVM + standard class libraries.
+- **JVM (Java Virtual Machine)**: Executes bytecode, provides memory management, and OS abstraction.
+
+### JVM Internals
+- **Class Loader**: Loads classes dynamically.
+- **Memory Areas**:
+  - Heap (objects)
+  - Stack (method frames)
+  - Method Area (class definitions)
+  - PC Register
+- **Execution Engine**: Interpreter + JIT (Just-In-Time compiler)
 
 ---
+
+## 5. Basic Syntax & Structure
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+- `class` defines a class.
+- `main()` is the entry point.
+- `System.out.println()` prints output.
+
+---
+
+## 6. Data Types & Variables
+
+### Primitive Types
+
+| Type    | Size     | Example         |
+|---------|----------|------------------|
+| `int`   | 4 bytes  | `int age = 30;`  |
+| `double`| 8 bytes  | `double pi = 3.14;` |
+| `char`  | 2 bytes  | `char c = 'A';`  |
+| `boolean`| 1 bit   | `boolean flag = true;` |
+
+### Reference Types
+Arrays, Strings, custom objects, etc.
+
+---
+
+## 7. Control Structures
+
+### If-Else
+```java
+if (score > 90) {
+    System.out.println("Excellent");
+} else {
+    System.out.println("Try harder");
+}
+```
+
+### Loops
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+while (condition) {
+    // repeat block
+}
+
+do {
+    // executes at least once
+} while (condition);
+```
+
+---
+
+## 8. Object-Oriented Programming (OOP)
+
+### Abstraction
+```java
+abstract class Animal {
+    abstract void makeSound();
+}
+```
+
+### Encapsulation
+Use `private` variables and `public` getter/setter methods to protect internal state.
+
+### Inheritance
+```java
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+### Polymorphism
+```java
+Animal a = new Dog();
+a.makeSound(); // Bark (runtime method dispatch)
+```
+---
+
+## 9. Error Handling
+
+### Try-Catch-Finally
+```java
+try {
+    int x = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero.");
+} finally {
+    System.out.println("Always executes.");
+}
+```
+
+### Custom Exception
+```java
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String msg) {
+        super(msg);
+    }
+}
+```
+
+---
+
+## 10. Common Java APIs
+
+| Package               | Description                             |
+|------------------------|-----------------------------------------|
+| `java.lang`            | Core types like `String`, `Math`, etc.  |
+| `java.util`            | Collections, dates, utilities           |
+| `java.io`              | File and stream handling                |
+| `java.nio`             | Non-blocking I/O                        |
+| `java.net`             | Sockets, URLs, HTTP                     |
+| `java.sql`             | JDBC for database operations            |
+| `java.util.concurrent` | Thread-safe concurrent utilities        |
+
+---
+
+## 11. Development Tools
+
+- IntelliJ IDEA
+- Eclipse
+- NetBeans
+- Maven
+- Gradle
+- JUnit / TestNG
+- Git
+- Javadoc
+
+---
+
+## 12. Real-World Use Cases
+
+| **Use Case**             | **Description**                                                                 |
+|--------------------------|---------------------------------------------------------------------------------|
+| **Enterprise Applications** | Java EE / Jakarta EE used for secure, large-scale, and maintainable systems.     |
+| **Android Development**     | Java was the primary language for Android apps before Kotlin became dominant.     |
+| **Web Backends**            | Frameworks like **Spring Boot** are widely used to develop RESTful APIs.         |
+| **Big Data**                | Java is used in **Hadoop**, **Kafka**, **Spark** for distributed data processing. |
+| **Embedded Systems**        | Java ME (Micro Edition) runs on resource-constrained devices like IoT sensors.    |
+| **Financial Services**      | Java’s stability and speed make it ideal for fintech apps and payment gateways.  |
+| **Cloud & Microservices**   | Libraries like **Spring Cloud**, **Quarkus** power container-ready deployments.  |
+
+---
+
+## 13. Getting Started with Java
+
+### Installation  
+You can install Java on your system via the official downloads or using your OS package manager.
+
+- Manual download options:
+- Download from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://jdk.java.net)
+  
+
+### Ubuntu Installation via CLI
+
+Follow the steps below to install Java on Ubuntu using the terminal:
+
+#### Step 1: Update the package index
+```bash
+sudo apt update
+```
+#### Step 2: Install OpenJDK 17
+```bash
+sudo apt install openjdk-17-jdk -y
+```
+
+### Setup
+- Set environment variable `JAVA_HOME`
+- Add `$JAVA_HOME/bin` to system `PATH`
+
+### Compile and Run
+```bash
+javac HelloWorld.java
+java HelloWorld
+```
+
+### Using IntelliJ IDEA
+- New project → Create Java class → Write code → Run
+
+---
+
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
+
 
 ## References
 
-- Oracle Java Docs: https://docs.oracle.com/javase/
-- OpenJDK: https://openjdk.org/
-- Java History: https://en.wikipedia.org/wiki/Java_(programming_language)
 
+| **Link**                                                                 | **Description**                                   |
+|--------------------------------------------------------------------------|---------------------------------------------------|
+| [Java intro ](https://www.oracle.com/java/technologies/javase/jdk24-readme-downloads.html) | Document format followed from this link.          |
+
+
+---
