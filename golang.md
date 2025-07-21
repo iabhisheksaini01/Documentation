@@ -21,9 +21,6 @@ This Bash script provides an interactive utility to install or upgrade **Go (Gol
 - [Installation Methods](#installation-methods)  
 - [How It Works](#how-it-works)  
 - [Usage](#usage)  
-- [Setting Default Go Version](#setting-default-go-version)  
-- [Verification](#verification)  
-- [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -39,9 +36,6 @@ This Bash script provides an interactive utility to install or upgrade **Go (Gol
 
 - Install Go using APT package manager
 - Install specific Go versions via official binary tarballs
-- Upgrade previously installed Go versions (non-system)
-- Clean removal of existing Go installation in `/usr/local/go`
-- Automatically update `PATH` in `~/.profile` if required
 - Version selection from supported list
 - Easy to extend with more versions
 
@@ -68,17 +62,16 @@ The script supports three types of operations:
 |--------|-------------|
 | 1      | Install Go via system package manager (`apt`) |
 | 2      | Install Go via official tarball from go.dev |
-| 3      | Upgrade an existing Go installation using the tarball |
+
 
 ---
 
 ## How It Works
 
-1. Prompts the user to select an operation (install/upgrade)
+1. Prompts the user to select an operation (install)
 2. Asks for the desired Go version
 3. Installs Go using the selected method
-4. Ensures that `/usr/local/go/bin` is in your `PATH`
-5. Displays the installed Go version at the end
+4. Displays the installed Go version at the end
 
 ---
 
@@ -88,78 +81,106 @@ Run the script with Bash:
 
 ```bash
 bash go_installer.sh
-
+```
 ---
 ## Bash Script
 install_go.sh
 ```bash
 #!/bin/bash
 
-echo "Select Go Operation:"
-echo "1) Install via Package Manager (apt/snap)"
-echo "2) Install via Tarball (official Go binary)"
-echo "3) Upgrade Existing Installed Version (non-system)"
-read -p "Enter choice (1-3): " method
+echo "Select Go Installation Method:"
+echo "1) Package Manager (via apt)"
+echo "2) Tarball (official binary)"
+read -p "Enter method (1 or 2): " method
 
 echo
-echo "Select Go version:"
-echo "1) 1.20.7"
-echo "2) 1.21.0"
-echo "3) 1.22.0"
-read -p "Enter version (1-3): " choice
+echo "Select Go version to install:"
+echo "1) 1.18"
+echo "2) 1.19"
+echo "3) 1.20"
+echo "4) 1.21"
+echo "5) 1.22"
+read -p "Enter version choice (1-5): " choice
 
 case $choice in
-  1) version="1.20.7" ;;
-  2) version="1.21.0" ;;
-  3) version="1.22.0" ;;
-  *) echo "Invalid version"; exit 1 ;;
+  1) goversion="1.18.10" ;;
+  2) goversion="1.19.13" ;;
+  3) goversion="1.20.14" ;;
+  4) goversion="1.21.11" ;;
+  5) goversion="1.22.3" ;;
+  *) echo "Invalid version choice"; exit 1 ;;
 esac
 
-install_via_package_manager() {
-  echo "Installing Go via apt (may be outdated version)..."
+if [[ $method == 1 ]]; then
+  echo
+  echo "Installing Go $goversion using APT..."
+
   sudo apt update
-  sudo apt install -y golang
-  echo "Go installed via package manager. Check version with 'go version'."
-}
+  sudo apt install -y golang-go
 
-install_via_tarball() {
-  echo "Installing Go $version from official tarball..."
+  # Note: apt usually installs default Go version
+  installed_path="/usr/bin/go"
 
-  sudo rm -rf /usr/local/go
-  wget https://go.dev/dl/go${version}.linux-amd64.tar.gz -O /tmp/go${version}.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf /tmp/go${version}.linux-amd64.tar.gz
+elif [[ $method == 2 ]]; then
+  echo
+  echo "Installing Go $goversion from tarball..."
 
-  # Add /usr/local/go/bin to PATH if not already present
-  if ! grep -q '/usr/local/go/bin' <<< "$PATH"; then
-    echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-    echo "Added /usr/local/go/bin to PATH in ~/.profile. Please re-login or run 'source ~/.profile'"
-  fi
+  cd /tmp
+  wget https://go.dev/dl/go$goversion.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go$goversion.linux-amd64.tar.gz
 
-  echo "Go $version installed from tarball."
-}
+  # Move to unique versioned folder
+  sudo mv /usr/local/go /usr/local/go$goversion
 
-upgrade_existing_version() {
-  echo "Upgrading Go $version..."
-
-  # Check if Go is installed
-  if ! command -v go &> /dev/null; then
-    echo "Go not found. Please install first."
-    exit 1
-  fi
-
-  install_via_tarball
-
-  echo "Go $version upgraded."
-}
-
-case $method in
-  1) install_via_package_manager ;;
-  2) install_via_tarball ;;
-  3) upgrade_existing_version ;;
-  *) echo "Invalid method selected."; exit 1 ;;
-esac
+  installed_path="/usr/local/go$goversion/bin/go"
+else
+  echo "Invalid installation method selected."
+  exit 1
+fi
 
 echo
-echo "Installed Go version:"
-go version || echo "Go is not installed or not in PATH."
+echo "Registering all Go versions with update-alternatives..."
+
+# Search and register all /usr/local/goX.Y/bin/go and /usr/bin/go
+for bin in /usr/local/go*/bin/go /usr/bin/go; do
+  [[ -x "$bin" ]] || continue
+  ver=$($bin version | awk '{print $3}' | sed 's/go//')
+  prio=$((100 + ${ver##*.}))
+  echo " - Registering $bin with priority $prio"
+  sudo update-alternatives --install /usr/local/bin/go go "$bin" "$prio"
+done
+
+echo
+echo "Do you want to select the default go version now?"
+read -p "Enter y/n: " change_default
+
+if [[ $change_default == "y" || $change_default == "Y" ]]; then
+  sudo update-alternatives --config go
+fi
+
+echo
+echo "Installed Go versions available via alternatives:"
+sudo update-alternatives --display go
+echo
+echo "Current default Go version: $(go version)"
 ```
+---
+
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
+
+---
+
+## References
+
+| **Link**                                                                 | **Description**                                   |
+|--------------------------------------------------------------------------|---------------------------------------------------|
+| [Python installation guide– ](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu) | Document format followed from this link.          |
+
+
+
+
+
