@@ -197,8 +197,3 @@ chmod +x install_python.sh
 |--------------------------------------------------------------------------|---------------------------------------------------|
 | [Python installation guide– ](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu) | Document format followed from this link.          |
 
-
-
-
-## 👥 Contributor
-## By: Abhishek saini
