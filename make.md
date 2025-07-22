@@ -1,32 +1,109 @@
-# Standard Operating Procedure (SOP): Using `make` Build Automation Tool
+# SOP: Make Build Tool - Installation
 
-## 1. Purpose
-This document outlines the standard procedures for using the `make` build automation tool to compile and manage software projects efficiently.
+## Author Information
 
-## 2. Scope
-This SOP applies to:
-- Software developers
-- Build engineers
-- DevOps personnel
-- Anyone responsible for project builds in Unix/Linux environments
+| Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer        | L2 Reviewer       |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|--------------------|-------------------|
+| Abhishek Saini  | 21-07-2025         | V 1.0            | 21-07-2025        | Prashant           | Priyanka        | Rishabh Sharma     | Piyush Upadhyay   |
 
-## 3. Prerequisites
-- GNU Make installed (typically `make` package)
-- Basic understanding of compilation processes
-- Familiarity with command line interface
-- Project source code with a `Makefile`
+---
 
-## 4. Definitions
-- **Makefile**: A file containing rules that define how to build the project
-- **Target**: A file to be generated or an action to be performed
-- **Prerequisite**: A file or action required before a target can be built
-- **Recipe**: The commands needed to build the target
+## 1. Objective
 
-## 5. Procedures
+The purpose of this SOP is to define a standardized procedure to:
 
-### 5.1 Creating a Basic Makefile
-```make
-# Sample Makefile structure
-target: prerequisites
-	recipe
-	...
+- Install the `make` build tool
+- Ensure it is ready for use in build automation tasks
+
+---
+
+##  2. Prerequisites
+
+- Operating System: Ubuntu/Debian-based Linux
+- User must have `sudo` privileges
+
+---
+
+## 3. Step-by-Step Installation Guide
+
+###  Step 1: Update System Packages
+
+```bash
+sudo apt update
+```
+
+### 🔹 Step 2: Install Make (and essential build tools)
+
+```bash
+sudo apt install build-essential -y
+```
+
+*Note:* `build-essential` includes `make`, `gcc`, and other compilation tools.
+
+---
+
+## ✅ 4. Acceptance Criteria
+
+After installation, validate that `make` is correctly installed and functional:
+
+| Checkpoint                      | Command                           | Expected Output                                    |
+|---------------------------------|-----------------------------------|----------------------------------------------------|
+| Verify make version             | `make --version`                  | Displays installed make version (e.g. GNU Make 4.x)|
+| Check make binary location      | `which make`                      | Should return `/usr/bin/make`                     |
+| Compile basic Makefile example  | See below sample test             | Should build `hello` program successfully         |
+
+---
+
+## 🧪 5. Functional Test (Simple Makefile Example)
+
+### Create test files:
+
+#### 🔸 hello.c
+
+```c
+#include <stdio.h>
+int main() {
+    printf("Hello, Make!\n");
+    return 0;
+}
+```
+
+#### 🔸 Makefile
+
+```makefile
+all:
+	gcc -o hello hello.c
+```
+
+### Run make:
+
+```bash
+make
+```
+
+### Run the output:
+
+```bash
+./hello
+```
+
+### Expected:
+
+```text
+Hello, Make!
+```
+
+---
+
+## 🧼 6. Cleanup (Optional)
+
+```bash
+rm hello hello.c Makefile
+```
+
+---
+
+## 📝 7. Notes
+
+- `make` does not compile code by itself; it automates the compilation by reading instructions from a `Makefile`.
+- Useful in C/C++ projects and even in DevOps automation pipelines.
