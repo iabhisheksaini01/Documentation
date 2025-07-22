@@ -1,28 +1,19 @@
 # Python Installation Automation Script
 
+
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
+---
 ## Author Information
 
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
-
----
-
-
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
-
-## A Bash script to automate Python installation on Ubuntu systems using two methods:
-
-- Package Manager (via APT + deadsnakes PPA)
-- Tarball (from source using `make altinstall`)
-
-######     It also configures and manages multiple Python versions using `update-alternatives`.
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  -      |      -  |  - |
 
 ---
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [Objective](#objective)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Bash Script](#bash-script)
@@ -31,14 +22,14 @@
 
 ---
 
-## Introduction
+## Objective
 
-Managing multiple Python versions is essential for many developers, especially when working with legacy applications or trying new versions. This script provides a simplified interface to install Python via:
+## A Bash script to automate Python installation on Ubuntu systems using two methods:
 
-- APT-based package manager (`ppa:deadsnakes/ppa`)
-- Source tarball (from [python.org](https://www.python.org/ftp/python/))
+- Package Manager (via APT + deadsnakes PPA)
+- Tarball (from source using `make altinstall`)
 
-It also registers installed versions with `update-alternatives`, letting you switch defaults easily.
+######     It also configures and manages multiple Python versions using `update-alternatives`.
 
 ---
 
@@ -174,11 +165,8 @@ chmod +x install_python.sh
 
 | Python Version | Status     |
 |----------------|------------|
-| 3.8            | Supported  |
-| 3.9            | Supported  |
-| 3.10           | Supported  |
-| 3.11           | Supported  |
-| 3.12           | Supported  |
+| 3.8  +          | Supported  |
+
 
 ---
 
