@@ -112,4 +112,4 @@ Hello, Make!
 
 | **Link**                                                                 | **Description**                                   |
 |--------------------------------------------------------------------------|---------------------------------------------------|
-| [Make installation guide– ](https://www.tutorialspoint.com/makefile/index.htm) | Document format followed from this link.          |
+| [Make installation guide ](https://www.tutorialspoint.com/makefile/index.htm) | Document format followed from this link.          |
