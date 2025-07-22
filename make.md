@@ -42,7 +42,7 @@ sudo apt install build-essential -y
 
 ---
 
-## ✅ 4. Acceptance Criteria
+## 4. verify & version check
 
 After installation, validate that `make` is correctly installed and functional:
 
@@ -50,11 +50,10 @@ After installation, validate that `make` is correctly installed and functional:
 |---------------------------------|-----------------------------------|----------------------------------------------------|
 | Verify make version             | `make --version`                  | Displays installed make version (e.g. GNU Make 4.x)|
 | Check make binary location      | `which make`                      | Should return `/usr/bin/make`                     |
-| Compile basic Makefile example  | See below sample test             | Should build `hello` program successfully         |
 
 ---
 
-## 🧪 5. Functional Test (Simple Makefile Example)
+## 5. Functional Test (Simple Makefile Example)
 
 ### Create test files:
 
@@ -88,7 +87,7 @@ make
 ```
 
 ### Expected:
-
+Acceptance CriteriaAcceptan Acceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance CriteriaAcceptance Criteriace Criteria
 ```text
 Hello, Make!
 ```
