@@ -4,20 +4,17 @@
 
 | Created by      | Created on         | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  Priyanka      |      Rishabh sharma   |   piyush upadhyay |
+| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          | -    |      -  |   - |
 
 ---
-## Table of Contents
-
-| S.No | Section                             | Description                                             |
-|------|-------------------------------------|---------------------------------------------------------|
-| 1    | [System Information](#system-information)            | Commands to get system info like kernel, memory, disk    |
-| 2    | [User Management](#user-management)                  | Add, remove, or modify users and groups                 |
-| 3    | [Directory & File Operations](#directory--file-operations) | Basic file and directory commands                   |
-| 4    | [Permission & Ownership](#permission--ownership)     | Manage file permissions and ownership                   |
-| 5    | [Networking](#networking)                            | View IPs, test connectivity, and network tools           |
-| 6    | [Reboot and Shutdown](#reboot-and-shutdown)          | Commands to restart or power off the system             |
-| 7    | [File Viewing & Editing](#file-viewing--editing)     | Tools to view and edit files                            |
+## Table of Contents                           
+| 1    | [System Information](#system-information)      |
+| 2    | [User Management](#user-management)                  | 
+| 3    | [Directory & File Operations](#directory--file-operations) |
+| 4    | [Permission & Ownership](#permission--ownership)     | 
+| 5    | [Networking](#networking)                            | 
+| 6    | [Reboot and Shutdown](#reboot-and-shutdown)          | 
+| 7    | [File Viewing & Editing](#file-viewing--editing)     | 
 
 
 
@@ -26,7 +23,7 @@ To provide a detailed list of frequently used Ubuntu commands with their descrip
 
 ---
 
-## 1. System Information
+## System Information
 
 ### Description:
 Commands to get kernel, hostname, memory, disk usage, and uptime information.
@@ -39,18 +36,9 @@ df -h             # Show disk space usage in human-readable format
 free -h           # Show memory usage in human-readable format
 uptime            # Show how long the system has been running and load average
 ```
-
-### Examples:
-```bash
-uname -a
-df -h
-free -h
-uptime
-```
-
 ---
 
-## 2. User Management
+## User Management
 
 ### Description:
 Manage user accounts and groups.
@@ -62,17 +50,9 @@ sudo userdel <username>               # Delete an existing user
 sudo usermod -aG <group> <username>   # Add user to a supplementary group
 id <username>                         # Display UID, GID, and groups of the user
 ```
-
-### Examples:
-```bash
-sudo adduser devuser
-sudo usermod -aG sudo devuser
-id devuser
-```
-
 ---
 
-## 3. Directory & File Operations
+## Directory & File Operations
 
 ### Description:
 Create, view, move, delete, and manage files and directories.
@@ -88,19 +68,9 @@ cat file.txt                  # Display contents of a file
 cp source.txt dest.txt        # Copy file from source to destination
 mv oldname.txt newname.txt    # Rename or move a file
 ```
-
-### Examples:
-```bash
-mkdir test_dir
-cd test_dir
-touch example.txt
-cat example.txt
-mv example.txt sample.txt
-```
-
 ---
 
-## 4. Permission & Ownership
+## Permission & Ownership
 
 ### Description:
 Modify file permissions and ownership.
@@ -111,16 +81,9 @@ chmod +x script.sh            # Add execute permission to a script
 chmod 755 file                # Set permission: rwxr-xr-x
 chown user:group file         # Change file owner and group
 ```
-
-### Examples:
-```bash
-chmod +x install.sh
-chown ubuntu:ubuntu config.json
-```
-
 ---
 
-## 5. Networking
+## Networking
 
 ### Description:
 View IP configuration, test connectivity, and check network services.
@@ -132,17 +95,9 @@ ping <hostname>               # Check connectivity to a remote host
 netstat -tuln                 # Show active listening ports (TCP/UDP)
 curl http://localhost:3000    # Send HTTP request to test a local service
 ```
-
-### Examples:
-```bash
-ip a
-ping google.com
-curl http://localhost:8080
-```
-
 ---
 
-## 6. Reboot and Shutdown
+## Reboot and Shutdown
 
 ### Description:
 Restart or shut down the machine.
@@ -152,16 +107,9 @@ Restart or shut down the machine.
 sudo reboot                   # Reboot the system
 sudo shutdown now             # Shut down the system immediately
 ```
-
-### Examples:
-```bash
-sudo reboot
-sudo shutdown now
-```
-
 ---
 
-## 7. File Viewing & Editing
+## File Viewing & Editing
 
 ### Description:
 Read or modify file content using terminal editors.
@@ -173,14 +121,6 @@ less file.txt                 # View file one page at a time
 nano file.txt                 # Edit file using nano (beginner friendly)
 vim file.txt                  # Edit file using vim (advanced editor)
 ```
-
-### Examples:
-```bash
-cat notes.txt
-nano config.txt
-vim script.sh
-```
-
 ---
 ## Contact Information
 
