@@ -174,11 +174,8 @@ chmod +x install_python.sh
 
 | Python Version | Status     |
 |----------------|------------|
-| 3.8            | Supported  |
-| 3.9            | Supported  |
-| 3.10           | Supported  |
-| 3.11           | Supported  |
-| 3.12           | Supported  |
+| 3.8+        | Supported  |
+
 
 ---
 
