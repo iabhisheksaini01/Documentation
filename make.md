@@ -12,7 +12,7 @@
 
 The purpose of this SOP is to define a standardized procedure to:
 
-- To provide a standardized procedure for installing and validating the GNU Make tool for use in build automation environments such as C/C++ projects and DevOps pipelines.Ensure it is ready for use in build automation tasks for C, C++, and other supported languages and workflows
+- To provide a standardized procedure for installing and validating the GNU Make tool, ensuring it is ready for use in build automation workflows such as compiling C/C++ programs, managing dependencies, and automating tasks across various programming languages and DevOps environments.
 ---
 
 ##  2. Prerequisites
