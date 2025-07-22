@@ -91,18 +91,25 @@ Acceptance CriteriaAcceptan Acceptance CriteriaAcceptance CriteriaAcceptance Cri
 ```text
 Hello, Make!
 ```
-
 ---
 
-## 🧼 6. Cleanup (Optional)
-
-```bash
-rm hello hello.c Makefile
-```
-
----
-
-## 📝 7. Notes
+##  7. Notes
 
 - `make` does not compile code by itself; it automates the compilation by reading instructions from a `Makefile`.
 - Useful in C/C++ projects and even in DevOps automation pipelines.
+
+- --
+
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
+
+---
+
+## References
+
+| **Link**                                                                 | **Description**                                   |
+|--------------------------------------------------------------------------|---------------------------------------------------|
+| [Make installation guide– ](https://www.tutorialspoint.com/makefile/index.htm) | Document format followed from this link.          |
