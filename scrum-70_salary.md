@@ -56,6 +56,8 @@ A separate service for salary work is important in a microservices system. It ke
 
 ## Pre-requisites
 
+### System Requirements
+
 | Hardware Specifications | Minimum Recommendation |
 |-------------------------|------------------------|
 | Disk Space              | 20GB                  |
@@ -127,7 +129,7 @@ Salary API sends the final response.
 
 ---
 
-## Step-by-step for Salary API
+## Step-By-Step Installation Of Application (Salary Api)
 
   Please follow step here  git repo
 
