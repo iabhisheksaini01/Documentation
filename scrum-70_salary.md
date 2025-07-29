@@ -10,26 +10,25 @@
 ---
 
 ##  Table of Contents
-
-1. [Introduction](#introduction)  
-2. [Why need this application?](#why-need-this-application)  
-3. [What problems does it resolve?](#what-problems-does-it-resolve)  
-4. [Pre-requisites](#pre-requisites)  
+- [Introduction](#introduction)
+- [Why need this application?](#why-need-this-application)  
+- [What problems does it resolve?](#what-problems-does-it-resolve)  
+- [Pre-requisites](#pre-requisites)  
     - [System Requirements](#system-requirements)  
-5. [Dependencies](#dependencies)  
+-  [Dependencies](#dependencies)  
     - [Build Time Dependency](#build-time-dependency)  
     - [Run Time Dependency](#run-time-dependency)  
     - [Important Ports](#important-ports)  
-6. [Architecture](#architecture)  
-7. [Dataflow Diagram](#dataflow-diagram)  
-8. [Step-by-step installation of Application](#step-by-step-installation-of-application)  
+-  [Architecture](#architecture)  
+-  [Dataflow Diagram](#dataflow-diagram)  
+-  [Step-by-step installation of Application](#step-by-step-installation-of-application)  
     - [Step 1: Installation of software Dependencies](#step1-installation-of-software-dependencies)  
     - [Step 2: Build/Artifact Generation](#step2-buildartifact-generation)  
     - [Step 3: Application Deployment](#step3-application-deployment)  
-9. [Troubleshooting](#troubleshooting)
-10. [Endpoints](#endpoints) 
-11. [Contact Information](#contact-information)  
-12. [References](#references)  
+-  [Troubleshooting](#troubleshooting)
+-  [Endpoints](#endpoints) 
+-  [Contact Information](#contact-information)  
+-  [References](#references)  
 
 ---
 
@@ -43,17 +42,15 @@ A dedicated service for salary-related operations is crucial in a distributed mi
 
 ---
 ## What problems does it resolve?
---> Eliminates salary data duplication across services
+- Eliminates salary data duplication across services
 
---> Provides consistent APIs for salary operations
+-  Provides consistent APIs for salary operations
 
---> Enhances maintainability of payroll logic
+-  Enhances maintainability of payroll logic
 
--->Enables audit trails for salary changes
+ - Enables audit trails for salary changes
 
--->Simplifies integration with downstream services like attendance and leave management
-
-
+ - Simplifies integration with downstream services like attendance and leave management
 
 ---
 
@@ -65,6 +62,7 @@ A dedicated service for salary-related operations is crucial in a distributed mi
 | OS                       | Ubuntu(22.04)         |
 
 ---
+
 ## Dependencies
 
 ### Build Time Dependency
@@ -93,9 +91,10 @@ A dedicated service for salary-related operations is crucial in a distributed mi
 | 6379          | 	Redis port          |
 
 ---
-### Architecture
-![Screenshot 2025-05-02 123839](https://github.com/user-attachments/assets/36f728a3-601c-48ac-b4c6-1d84dcdfe32c)
 
+### Architecture
+
+![Screenshot 2025-05-02 123839](https://github.com/user-attachments/assets/36f728a3-601c-48ac-b4c6-1d84dcdfe32c)
 
 ---
 ### Dataflow Diagram
