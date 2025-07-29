@@ -1,5 +1,6 @@
-## Documentation of Salary Api
----
+## Documentation Of Salary Api
+
+<img src="https://github.com/user-attachments/assets/9485facc-f520-412e-b936-d1f82e9d479d" alt="Salary API Logo" width="300"/>
 
 ## Author Information
 
@@ -22,9 +23,6 @@
 -  [Architecture](#architecture)  
 -  [Dataflow Diagram](#dataflow-diagram)  
 -  [Step-by-step installation of Application](#step-by-step-installation-of-application)  
-    - [Step 1: Installation of software Dependencies](#step1-installation-of-software-dependencies)  
-    - [Step 2: Build/Artifact Generation](#step2-buildartifact-generation)  
-    - [Step 3: Application Deployment](#step3-application-deployment)  
 -  [Troubleshooting](#troubleshooting)
 -  [Endpoints](#endpoints) 
 -  [Contact Information](#contact-information)  
@@ -33,24 +31,26 @@
 ---
 
 ## Introduction
-Salary API is a microservice developed in Java that handles all operations related to salary processing and record-keeping within the OT-Microservices architecture. Designed with portability in mind, this service is platform-agnostic and can operate seamlessly across different operating systems, provided a Java Runtime Environment (JRE) is available. Its core responsibility is to ensure accurate and efficient handling of payroll transactions while integrating smoothly into the broader microservice ecosystem.
+The Salary API is a microservice built using Java. It manages all tasks related to salary processing and keeping salary records. This service is part of the OT-Microservices system. It is designed to work on any operating system as long as Java Runtime Environment (JRE) is installed, making it platform-independent. Its main job is to handle payroll operations accurately and efficiently, and it works well with other microservices in the system.
+
+
 
 ---
 
 ## Why need this application?
-A dedicated service for salary-related operations is crucial in a distributed microservices architecture. Centralizing this logic in a single microservice promotes modularity, simplifies payroll integration, and ensures a single source of truth for all salary data and transactions.
+A separate service for salary work is important in a microservices system. It keeps salary data in one place, makes it easier to manage, and helps connect it smoothly with other services.
 
 ---
 ## What problems does it resolve?
 - Eliminates salary data duplication across services
 
--  Provides consistent APIs for salary operations
+- Provides consistent APIs for salary operations
 
--  Enhances maintainability of payroll logic
+- Makes it easier to update and manage salary-related code
 
- - Enables audit trails for salary changes
+- Keeps track of any changes made to salary data
 
- - Simplifies integration with downstream services like attendance and leave management
+- Makes it easier to connect with other systems like attendance and leave tracking
 
 ---
 
@@ -58,8 +58,8 @@ A dedicated service for salary-related operations is crucial in a distributed mi
 
 | Hardware Specifications | Minimum Recommendation |
 |-------------------------|------------------------|
-| Disk                     | 20GB                  |
-| OS                       | Ubuntu(22.04)         |
+| Disk Space              | 20GB                  |
+| OS                      | Ubuntu(22.04)         |
 
 ---
 
@@ -115,11 +115,9 @@ If cache miss → Redis queries ScyllaDB for the data.
 
 **4.ScyllaDB → Redis Cache**
 
-
 ScyllaDB send the data 
 
 **5.Redis Cache → Salary API**
-
 
 Redis returns the fresh data back to the Salary API.
 
@@ -127,22 +125,22 @@ Redis returns the fresh data back to the Salary API.
 
 Salary API sends the final response.
 
+---
 
 ## Step-by-step for Salary API
 
-  Please follow step here  
-
+  Please follow step here  git repo
 
 ---
 ## Troubleshooting
+
 | **Issue** | **Possible Cause** | **Solution** |
 |----------|---------------------|----------------|
-|  ScyllaDB Connection Failed | ScyllaDB service is not running or incorrectly configured (host/port) |  Ensure ScyllaDB is installed and running using `nodetool status`<br> Verify correct host and port are set in `application.properties` |
-| Redis Port Misconfigured | Wrong port configured in the application settings (default is `6379`) |  Update to the correct port in application config<br>  Check Redis is listening using `ss -tuln | grep 6379` |
-|  Application Cannot Connect to Redis/ScyllaDB on EC2 | EC2 Security Group (SG) doesn’t allow required ports |  In EC2 Console, edit SG inbound rules<br>  Add ports `6379` for Redis and `9042` for ScyllaDB from trusted sources |
-|  Redis Not Caching Data | Cache logic is broken or Redis is unreachable |  Check Redis connection logs<br> Verify keys using `redis-cli KEYS *`<br>  Ensure cache logic is implemented correctly |
-|  Port 8080 Already in Use | Another process is using port 8080 |  Check using `lsof -i :8080`<br> Kill the process or change the port in the app config |
-
+| **Can't connect to ScyllaDB** | ScyllaDB is not running or the wrong address/port is used | Make sure ScyllaDB is installed and running (`nodetool status`) <br> Check if the right address and port are set in `application.properties` |
+| **Redis port is wrong** | The app is using the wrong port (default is `6379`) | Set the correct port in the app config <br> Check if Redis is listening using `ss -tuln | grep 6379` |
+| **App can't connect to Redis/ScyllaDB on EC2** | EC2 firewall (Security Group) is blocking the ports | Go to EC2 Console and edit inbound rules <br> Allow ports `6379` (Redis) and `9042` (ScyllaDB) from trusted IPs |
+| **Redis not storing cache** | Cache code has issues or Redis is down | Check Redis logs for errors <br> Use `redis-cli KEYS *` to see if data is there <br> Make sure caching is correctly written in code |
+| **Port 8080 already in use** | Some other app is already using port 8080 | Run `lsof -i :8080` to find the process <br> Stop that process or use another port in your app config |
 
 ---
 
