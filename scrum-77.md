@@ -13,22 +13,23 @@
 ---
 ## Table of Contents
 
-1. [Purpose](#purpose)
-2. [Pre-requisites](#pre-requisites)
+ - [Objective](#objective)
+ - [Pre-requisites](#pre-requisites)
    - [System Requirements](#system-requirements)
    - [Dependencies](#dependencies)
    - [Important Ports](#important-ports)
-3. [Architecture](#architecture)
-4. [Step-by-step installation of ScyllaDB](#step-by-step-installation-of-scylladb)
-5. [Basic Operations](#basic-operations)
-6. [Troubleshooting](#troubleshooting)
-7. [Contact Information](#contact-information)
-8. [References](#references)
-    
+-  [Architecture](#architecture)
+- [Step-by-step installation of ScyllaDB](#step-by-step-installation-of-scylladb)
+-  [Basic Operations](#basic-operations)
+-  [Troubleshooting](#troubleshooting)
+- [Contact Information](#contact-information)
+- [References](#references)
 
-## Purpose
+---
 
- This POC will showcase standalone ScyllaDB's installation process, basic operations.
+## Objective
+
+The purpose of this Proof of Concept (POC) is to demonstrate the standalone installation, configuration, and basic usage of ScyllaDB on an Ubuntu system. It aims to help users understand the key architectural concepts, setup process, authentication mechanisms, and basic CQL operations involved in working with ScyllaDB. This document serves as a practical reference for deploying a single-node ScyllaDB instance for testing, learning, or development use cases.
 
 ---
 
@@ -57,6 +58,7 @@
 |-----------------|--------------------------------|
 | 9042            | CQL native transport port      |
 
+---
 
 ## Architecture
 
@@ -84,7 +86,6 @@ ScyllaDB follows a distributed architecture where data is automatically replicat
 * We are using **replication factor = 3**, with replicas placed in **different zones** to ensure **high availability**.
 
 ---
-
 
 ## Step-by-step installation of ScyllaDB
 
@@ -125,18 +126,17 @@ sudo scylla_io_setup
 
 ### Step 7: Start ScyllaDB service and check its status
 
-Start the ScyllaDB service:
+##### Start the ScyllaDB service:
 
 ```bash
 sudo systemctl start scylla-server
 ```
-Check the status of the ScyllaDB service
+##### Check the status of the ScyllaDB service
 
 ```bash
 sudo systemctl status scylla-server
 ```
 <img width="1851" height="494" alt="Screenshot from 2025-07-29 00-55-06" src="https://github.com/user-attachments/assets/b830c3a5-4d2e-446c-9317-4aa8551aec07" />
-
 
 
 ### Step 8: Verify ScyllaDB Installation
@@ -154,14 +154,14 @@ nodetool status
 ```bash
 sudo nano /etc/scylla/scylla.yaml
 ```
-After entering, Edit these entries for security purpose
+##### After entering, Edit these entries for security purpose
 ```bash
 authenticator: PasswordAuthenticator
 authorizer: CassandraAuthorizer
 ```
 ---
 
-### Authentication and Authorization in ScyllaDB
+## Authentication and Authorization in ScyllaDB
 
 #### `authenticator: PasswordAuthenticator`
 - **Purpose**: Specifies the method used for authentication in ScyllaDB.
@@ -177,55 +177,65 @@ authorizer: CassandraAuthorizer
 
 ---
 
-## Basic Operations
+## Basic Operations 
 
 Here are some basic CQL commands to get started with ScyllaDB:
 
 1. Connect to ScyllaDB using cqlsh:
    ```bash
-   cqlsh <private-ip> -u cassandra -p cassandra
-   ```
-![Screenshot 2025-04-26 110607](https://github.com/user-attachments/assets/4e1ca646-dd14-492d-8a31-d19a55df11d9)
-
-2. Create USER
-   ```
-   CREATE USER scylladb WITH PASSWORD 'password' SUPERUSER;
+   cqlsh <private-ip> -u scylladb -p password
    ```
 
-3. Create a DB(employee_db):
-   ```sql
+2. Create a Database(employee_db):
+   ```bash
    CREATE KEYSPACE employee_db WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
    ```
-4. USE employee_db;
-
-5. Query:
-   ```sql
+3. Use the Keyspace
+   ```bash
+   USE employee_db;
+   ```
+4. Create Table
+ ```bash
+CREATE TABLE employee_salary (
+    emp_id UUID PRIMARY KEY,
+    name TEXT,
+    salary INT
+);
+ ```
+5. Insert Entry
+  ```bash
+   INSERT INTO employee_salary (emp_id, name, salary)
+VALUES (uuid(), 'Abhishek', 50000);
+```
+6. Verify
+   ```bash
    SELECT * FROM employee_salary; 
    ```
+---
 
-9. Describe keyspace:
-   ```sql
-   Describe KEYSPACES;
-   ```
+<img width="1848" height="494" alt="Screenshot from 2025-07-29 11-02-31" src="https://github.com/user-attachments/assets/a789a186-80f5-4aca-8992-51154277b69a" />
 
-
+---
 
 ## Troubleshooting
 
-- If ScyllaDB service fails to start, check the logs:
+- ScyllaDB Not Starting?
+  ##### Check the service logs for details:  
   ```bash
   sudo journalctl -u scylla-server
-  ```
 
-- For performance issues, use the `nodetool` utility to check cluster status and performance metrics:
+- For performance issues
+  ##### use the `nodetool` utility to check cluster status and performance metrics:
   ```bash
   nodetool status
   ```
 
-- If you encounter connection issues, ensure that the ScyllaDB service is running:
+- Can't Connect?
+  ##### Make sure the ScyllaDB service is running:
   ```bash
   sudo systemctl status scylla-server
   ```
+---
 
 ## Contact Information
 
@@ -243,4 +253,3 @@ Here are some basic CQL commands to get started with ScyllaDB:
 | [ScyllaDB Installation Guide](https://docs.scylladb.com/stable/operating-scylla/procedures/install/install-ubuntu.html) | Official installation guide for Ubuntu |
 | [ScyllaDB University](https://university.scylladb.com/) | Free online courses on ScyllaDB       |
 
-| [Scylla Setup](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-88-Adil/common_stack/software/scylladb/configuration/README.md) | Scylla Configuration Setup |
