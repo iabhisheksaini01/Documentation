@@ -8,7 +8,7 @@
 
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  16-07-2025        | V 1.0            |     18-07-2025    |  Prashant          |  -      |     -   |   - |
+| Abhishek saini  |  28-07-2025        | V 1.0            |     29-07-2025    |  Prashant          |  -      |     -   |   - |
 
 ---
 ## Table of Contents
@@ -64,26 +64,28 @@ The purpose of this Proof of Concept (POC) is to demonstrate the standalone inst
 
 ScyllaDB follows a distributed architecture where data is automatically replicated across multiple nodes for fault tolerance and high availability.
 
-<img width="475" alt="image" src="https://github.com/user-attachments/assets/6447e269-e85d-4adc-8cdf-882984095090" />
+<img width="1203" height="475" alt="Screenshot from 2025-07-29 13-17-25" src="https://github.com/user-attachments/assets/d8189815-b468-42aa-871a-5f5be65c1a71" />
 
 
-###  **Left Circle – Token Ring (Consistent Hashing)**
 
-* This is a **token ring** representation.
-* Numbers **1 to 12** represent **partitions of data** (or **token ranges**).
-* ScyllaDB (like Cassandra) uses **consistent hashing** to divide data into **token ranges**.
-* Each token is **replicated** across multiple nodes for **fault tolerance**.
+### Left Side – Token Ring (Consistent Hashing)
+
+* This diagram shows the **token ring** structure.
+* Numbers **1 to 12** represent **data token ranges** (or partitions).
+* ScyllaDB, like Cassandra, uses **consistent hashing** to evenly distribute data across nodes.
+* Each token's data is **replicated on multiple nodes** to ensure **fault tolerance** and reliability.
 
 
-###  **Right – Node and Rack Assignment**
+### Right Side – Node, Rack, and Token Mapping
 
-* The cluster has **3 nodes** (X, Y, Z), each in a different **rack or availability zone**:
+* The cluster consists of **3 nodes**, each located in a different **rack or availability zone**:
+  - **Node X** → Rack 1 / Zone A  
+  - **Node Y** → Rack 2 / Zone B  
+  - **Node Z** → Rack 3 / Zone C  
 
-  * **Node X** → Rack 1 / Zone A
-  * **Node Y** → Rack 2 / Zone B
-  * **Node Z** → Rack 3 / Zone C
-* Each node is responsible for **specific tokens**, and **each token is stored on 3 different nodes** for replication.
-* We are using **replication factor = 3**, with replicas placed in **different zones** to ensure **high availability**.
+* Each node is responsible for handling **specific tokens**.
+* Each token is stored on **2 nodes** – one as the **primary copy**, and one as the **replica**.
+* The setup uses a **replication factor (RF) of 2**, with replicas placed across **different zones** to provide **high availability** and fault isolation.
 
 ---
 
