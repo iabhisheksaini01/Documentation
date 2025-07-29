@@ -54,7 +54,7 @@ A separate service for salary work is important in a microservices system. It ke
 
 ---
 
-## Prerequisites
+## Pre-requisites
 
 | Hardware Specifications | Minimum Recommendation |
 |-------------------------|------------------------|
