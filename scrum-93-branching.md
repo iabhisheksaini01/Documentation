@@ -15,17 +15,17 @@
 
 # **Table of Contents**
 
-1. [Introduction](#introduction)
-2. [Types of Branching Strategies](#types-of-branching-strategies)
+-  [Introduction](#introduction)
+-  [Types of Branching Strategies](#types-of-branching-strategies)
    - [Feature Branch Flow](#feature-branch-flow)
    - [Git Flow](#git-flow)
    - [GitLab Flow](#gitlab-flow)
    - [Environment Branch Flow](#environment-branch-flow)
-3. [How to Choose a Branching Strategy](#how-to-choose-a-branching-strategy)
-4. [Comparison of Branching Strategies](#comparison-of-branching-strategies)
-6. [Conclusion](#conclusion)
-7. [Contacts](#contacts)
-8. [References](#references)
+-  [How to Choose a Right -Branching Strategy](#how-to-choose-a-right-branching-strategy)
+-  [Comparison of Branching Strategies](#comparison-of-branching-strategies)
+-  [Conclusion](#conclusion)
+-  [Contacts](#contacts)
+-  [References](#references)
 
 ---
 ## Purpose
@@ -36,10 +36,10 @@ Branching strategies help developers work together without messing up the main c
 
 ## Introduction
 
-Branching strategies help organize code updates in Git. This guide covers four types .
+Branching strategies are used to manage code changes efficiently in Git. This guide explains four common types:
 - Feature Branch Flow
-- Git Flow,
-- GitLab Flow, and
+- Git Flow
+- GitLab Flow
 - Environment Branch Flow
 
 # **Types of Branching Strategies**
@@ -91,17 +91,20 @@ Environment Branch Flow involves using long-lived branches to represent differen
 
 For more details, refer to the-103
 
+---
+
+# **How to Choose a Right Branching Strategy**
 
 
-# **How to Choose a Branching Strategy**
+| **Situation**               | **Best Option**                                                                 |
+|----------------------------|----------------------------------------------------------------------------------|
+| **Team Size**              | Small teams → **Feature Branch Flow**  
+Large teams → **Git Flow**                      |
+| **Project Complexity**     | For complex projects → **Git Flow** or **Environment Branch Flow**              |
+| **Release Frequency**      | Frequent/continuous releases → **GitLab Flow** or **Environment Branch Flow**   |
+| **Deployment**
 
-| Factor              | Recommendation                                                                 |
-|---------------------|---------------------------------------------------------------------------------|
-| **Team Size**       | Small teams → Feature Branch Flow<br>Large teams → Git Flow                    |
-| **Project Complexity** | Complex projects → Git Flow or Environment Branch Flow                         |
-| **Release Frequency** | Continuous deployment → GitLab Flow or Environment Branch Flow                 |
-| **Deployment Needs**  | Need clear environment visibility → Environment Branch Flow                    |
-
+---
 
 
 # **Comparison of Branching Strategies**
@@ -115,17 +118,20 @@ For more details, refer to the-103
 | **Hotfix Management**       | Direct to main      | Hotfix branch | Direct to main   | Separate hotfix branch  |
 | **Deployment Control**      | Low                 | Medium        | High             | Very High               |
 
+---
 
 # **Conclusion**
 
 For this project, we are using the Feature Branch Flow, where each new feature is developed in a dedicated branch. This approach keeps development isolated, making it easier to manage changes, conduct code reviews, and ensure a stable main branch. Once a feature is complete, it is merged back into the main branch.
 
-#  **Contacts**
 
+## Contact Information
 
-| **Name**    | **Email address**         |
-|-------------|---------------------------|
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
 
+---
 
 
 # **References**
