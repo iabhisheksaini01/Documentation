@@ -4,7 +4,14 @@
   <img src="https://media-exp1.licdn.com/dms/image/C4E12AQHNx6uEivhvRQ/article-cover_image-shrink_720_1280/0/1650799881501?e=2147483647&v=beta&t=JxPiBo2dgpOfyB0lE6Ao3f363saYofrGBcGSeVZyHhM" alt="Ansible Logo" width="40%"/>
 </div>
 
-# **Author**
+## Author Information
+
+| Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
+| Abhishek saini  |  29-07-2025        | V 1.0            |     29-07-2025    |  Prashant          |  -      |      -  |  - |
+
+---
+
 
 # **Table of Contents**
 
@@ -20,11 +27,14 @@
 7. [Contacts](#contacts)
 8. [References](#references)
 
-# **Purpose**
+---
+## Purpose
 
-The purpose of branching strategies help keep the code stable and make teamwork easier by organizing how developers create, merge, and manage different changes. It allows multiple tasks to happen at the same time and ensures smooth releases
+Branching strategies help developers work together without messing up the main code. They let people create branches to work on new features, bug fixes, or changes. Later, these branches can be merged back safely. This way, many tasks can happen at the same time, and updates can be released smoothly.
 
-# **Introduction**
+---
+
+## Introduction
 
 Branching strategies help organize code updates in Git. This guide covers four types .
 - Feature Branch Flow
