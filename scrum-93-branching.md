@@ -1,8 +1,7 @@
 # **Branching Strategies**
 
-<div align="center">
-  <img src="https://media-exp1.licdn.com/dms/image/C4E12AQHNx6uEivhvRQ/article-cover_image-shrink_720_1280/0/1650799881501?e=2147483647&v=beta&t=JxPiBo2dgpOfyB0lE6Ao3f363saYofrGBcGSeVZyHhM" alt="Ansible Logo" width="40%"/>
-</div>
+  <img src="https://github.com/user-attachments/assets/d39069e7-9bce-4474-991b-5e7467e64f19" alt="Blog-branching-strategies" width="720" height="340" />
+
 
 ## Author Information
 
@@ -14,17 +13,17 @@
 
 
 # **Table of Contents**
-
+-  [Purpose](#purpose)
 -  [Introduction](#introduction)
 -  [Types of Branching Strategies](#types-of-branching-strategies)
    - [Feature Branch Flow](#feature-branch-flow)
    - [Git Flow](#git-flow)
    - [GitLab Flow](#gitlab-flow)
    - [Environment Branch Flow](#environment-branch-flow)
--  [How to Choose a Right -Branching Strategy](#how-to-choose-a-right-branching-strategy)
+-  [How to Choose Branching Strategy](#how-to-choose-branching-strategy)
 -  [Comparison of Branching Strategies](#comparison-of-branching-strategies)
 -  [Conclusion](#conclusion)
--  [Contacts](#contacts)
+-  [Contact Information](#contact-information)
 -  [References](#references)
 
 ---
@@ -42,14 +41,15 @@ Branching strategies are used to manage code changes efficiently in Git. This gu
 - GitLab Flow
 - Environment Branch Flow
 
-# **Types of Branching Strategies**
+---
 
+## Types of Branching Strategies
 
-# **Feature Branch Flow**
+### Feature Branch Flow
 
 Feature Branch Flow is a straightforward and effective strategy where each new feature is developed in a dedicated branch. This approach ensures isolated development, making it easier to manage changes, conduct code reviews, and avoid disruptions to the main codebase.
 
-### Key Features:
+#### Key Features:
 - Short-lived branches dedicated to a single feature.
 - Ideal for small teams or projects with simple development needs.
 - Once a feature is complete, it is merged back into the main branch.
@@ -57,18 +57,18 @@ Feature Branch Flow is a straightforward and effective strategy where each new f
 For more information, refer to the-100
 
 
-# **Git Flow**
+### Git Flow
 
 Git Flow is a well-defined branching strategy that introduces multiple branches for feature development, releases, and hotfixes. This strategy is ideal for projects with a structured release cycle, helping manage development phases more effectively.
 
-### Key Features:
+####  Key Features:
 - Long-lived branches such as master, develop, and release.
 - Feature branches for new features and hotfix branches for critical fixes.
 - Clear separation between development, testing, and production-ready code.
 
 For more details, refer to the [Git Flow Documentation]().
 
-# **GitLab Flow**
+### GitLab Flow
 
 GitLab Flow combines elements from both Feature Branch Flow and Git Flow, with a focus on deployment environments. It emphasizes continuous integration and deployment, making it a great choice for modern DevOps workflows.
 
@@ -80,11 +80,11 @@ GitLab Flow combines elements from both Feature Branch Flow and Git Flow, with a
 For more details, refer to the [GitLab Flow Documentation]-102
 
 
-# **Environment Branch Flow**
+### Environment Branch Flow
 
 Environment Branch Flow involves using long-lived branches to represent different deployment environments such as development, staging, and production. This strategy enhances visibility into what code is deployed where and facilitates smooth promotion of code across environments.
 
-### Key Features:
+#### Key Features:
 - Long-lived branches represent distinct environments.
 - Code promotion flows from less stable to more stable environments.
 - Supports complex deployment scenarios with multiple testing or staging environments.
@@ -93,21 +93,18 @@ For more details, refer to the-103
 
 ---
 
-# **How to Choose a Right Branching Strategy**
+## How to Choose Branching Strategy
 
-
-| **Situation**               | **Best Option**                                                                 |
-|----------------------------|----------------------------------------------------------------------------------|
-| **Team Size**              | Small teams → **Feature Branch Flow**  
-Large teams → **Git Flow**                      |
-| **Project Complexity**     | For complex projects → **Git Flow** or **Environment Branch Flow**              |
-| **Release Frequency**      | Frequent/continuous releases → **GitLab Flow** or **Environment Branch Flow**   |
-| **Deployment**
+| Factor               | What to Use and When                                                           |
+|----------------------|--------------------------------------------------------------------------------|
+| **Team Size**        | Small team → Use **Feature Branch Flow**<br>Big team → Use **Git Flow**        |
+| **Project Complexity** | If your project is complex → Use **Git Flow** or **Environment Branch Flow**  |
+| **Release Frequency** | If you release updates very often → Use **GitLab Flow** or **Environment Branch Flow** |
+| **Deployment Needs**  | If you want to manage different environments clearly → Use **Environment Branch Flow** |
 
 ---
 
-
-# **Comparison of Branching Strategies**
+## Comparison of Branching Strategies
 
 | Feature                     | Feature Branch Flow | Git Flow      | GitLab Flow      | Environment Branch Flow |
 |-----------------------------|---------------------|---------------|------------------|-------------------------|
@@ -120,10 +117,12 @@ Large teams → **Git Flow**                      |
 
 ---
 
-# **Conclusion**
+
+## Conclusion
 
 For this project, we are using the Feature Branch Flow, where each new feature is developed in a dedicated branch. This approach keeps development isolated, making it easier to manage changes, conduct code reviews, and ensure a stable main branch. Once a feature is complete, it is merged back into the main branch.
 
+---
 
 ## Contact Information
 
@@ -134,7 +133,7 @@ For this project, we are using the Feature Branch Flow, where each new feature i
 ---
 
 
-# **References**
+## References
 
 | Reference Name                  | Link                                                                                     | Description                                                           |
 |----------------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
