@@ -19,9 +19,9 @@
 - [What is DNS ](#what-is-dns)
 - [Types of records](#types-of-records)
 - [How it is work ](#how-it-is-work)
-- [How to get domain ](#how-to-get-domain)
+- [ How To Get Domain](#how-to-get-domain)
 - [Different DNS provider](#different-dns-provider)
-- [Comparision between DNS providers](#comparision-between-dns-providers)
+- [DNS Providers Comparison](#dns-providers-comparison)
 - [Contact information](#contact-information)
 - [References](#references)
 
@@ -44,43 +44,54 @@ Without DNS, we would need to remember the number (IP address) of every website 
 
 ## Types of records
 
- - **A (Address) Record:** Maps a domain name to an IPv4 address.
+| DNS Record Type | Description                                    |
+|-----------------|------------------------------------------------|
+| A               | Maps a domain to an IPv4 address.              |
+| AAAA            | Maps a domain to an IPv6 address.              |
+| CNAME           | Alias for another domain name.                  |
+| MX              | Specifies mail servers for email delivery.     |
+| TXT             | Holds text information, often for verification or security. |
+| NS              | Delegates a subdomain to a set of name servers.|
+| SOA             | Contains administrative info about the domain. |
+| PTR             | Maps an IP address to a domain name (reverse DNS). |
+| SRV             | Defines location of servers for specific services. |
+| SPF             | Specifies allowed mail servers to prevent spam (often in TXT). |
 
- - **AAAA (IPv6 Address) Record:** Maps a domain name to an IPv6 address
-
- - **CNAME (Canonical Name) Record:** Maps a domain name (alias) to another domain name.
-
- - **MX (Mail Exchange) Record:** Directs email to mail servers for a domain.
-
- - **TXT (Text) Record:** Provides arbitrary text data for a domain. 
-
- - **SOA (Start of Authority) Record:** Contains administrative information about the domain.
 
 ---
+## How DNS Works
 
-## How it is work 
+When you type a website name (like `example.com`) in your browser, DNS helps find the website’s address so your computer can connect to it. This happens in several steps with different servers:
 
 <img width="1164" height="850" alt="dns-lookup" src="https://github.com/user-attachments/assets/14f0d3f8-e71e-4035-8cb8-cdcd29ce9943" />
 
+### DNS Resolver  
+This is like a helper that looks up the website address for you. It first checks if it already knows the answer. If not, it asks other servers to find the right address.
 
-### DNS Recursor (or Resolver): 
-This is like a "helper" that looks up the website address for you. When you want to visit a website, it asks other servers to find the correct IP address that leads to the website.
+### Root Nameservers  
+These are the first servers the resolver asks. They don’t have the exact address but tell the resolver which servers handle domain endings like ".com" or ".org".
 
-### Root Nameservers: 
-These are the starting points of the DNS system. They help by pointing the resolver to the right type of server based on the website’s domain (like ".com", ".org", etc.).
+### TLD Nameservers  
+These servers handle the domain endings and tell the resolver where to find the exact server that knows the website’s address.
 
-### TLD Nameservers :
-These servers manage the domain extensions like ".com", ".org", and so on. They tell the resolver where to find the next server that knows the website’s exact IP address.
+### Authoritative Nameservers  
+These servers have the exact address of the website. They give the final answer to the resolver.
 
-### Authoritative Nameservers:
-These are the "final answer" servers. They have the exact IP address for the website you're looking for. There are two types:
-
-    Master (Primary): The main server that holds the original IP records.
-    Slave (Secondary): A backup server that has a copy of the information in case the master server fails.
+- **Primary (Master):** The main server that keeps the original website address.  
+- **Secondary (Slave):** Backup servers that keep a copy in case the main one doesn’t work.
 
 ---
 
-## How to get domain 
+### Extra Info
+
+- The resolver saves answers it finds for some time to help next requests faster.  
+- The resolver can either do all the asking itself or ask you to check some servers step-by-step.  
+- Authoritative servers can give different kinds of info like the website’s address, mail server, or verification details.
+
+
+---
+
+## How To Get Domain
 
 **For detailed information How to get Domain and how to use Domnin please refer to the following resources**
 | Link         | Description         |
@@ -88,26 +99,29 @@ These are the "final answer" servers. They have the exact IP address for the web
 | [Domain](123) |POC of Domain name system.| 
 
 ---
+## Different DNS provider
 
-## Different DNS provider 
+| DNS Providers       | Description                                                     |
+|---------------------|-----------------------------------------------------------------|
+| Namecheap           | Easy to use and gives free DNS when you buy a domain.           |
+| Amazon Route 53     | Good for complicated setups, especially with Amazon services.   |
+| Google Public DNS   | Fast, free, and reliable DNS service.                           |
+| GoDaddy             | Popular for buying domains and managing DNS, plus extra services like hosting and email. |
 
-| DNS Providers       | Description                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| Namecheap           | Easy-to-use DNS management, includes free DNS with domain registration.     |
-| Amazon Route 53     | Good for complex setups, like apps on Amazon Web Services.                  |
-| Google Public DNS   | Very fast, free, and trusted.                                               |
-| GoDaddy             | Popular for domain registration and DNS management, with additional services like website hosting and email. |
 
 ---
 
-## Comparision between DNS providers
+## DNS Providers Comparison
 
-| DNS Providers       | Key Features                                                                 | Speed  | Security           | Pricing                                                              |
-|---------------------|-------------------------------------------------------------------------------|--------|---------------------|----------------------------------------------------------------------|
-| **Namecheap**        | Easy-to-use interface, free DNS with domains, supports dynamic DNS, great support | High   | DDoS protection      | **Free DNS with domain; Premium DNS available at affordable pricing** |
-| Google Public DNS   | Fast, low-latency DNS                                                         | High   | Basic (no advanced security features) | Free                                                                |
-| Amazon Route 53     | Scalable, integrates with AWS, advanced routing policies                      | High   | DDoS protection      | Pay-as-you-go (based on queries and services used)                   |
-| GoDaddy             | Domain registration and DNS, integrated with hosting services                 | Medium | DDoS protection      | Paid (pricing depends on domain and hosting plan)                    |
+| Provider      | Speed             | Security (DNSSEC)                        | Pricing                   | Complexity                      |
+|---------------|-------------------|------------------------------------------|----------------------------|----------------------------------|
+| **Cloudflare**| Fast              | Supports DNSSEC for strong protection    | Free DNS service           | Very easy to use and set up     |
+| **Google DNS**| Fast              | DNSSEC supported                         | Paid (based on usage)      | Requires GCP knowledge          |
+| **AWS Route 53**| Fast            | High security with DNSSEC and failover   | Paid (per query/record)    | Needs AWS setup knowledge       |
+| **GoDaddy**   | Slower than others| No DNSSEC (less secure)                  | Free with domain           | Beginner-friendly interface     |
+| **Namecheap** | Moderate speed    | Basic DNSSEC available                   | Free with domain           | Simple and clean interface      |
+
+
 
 ---
 
