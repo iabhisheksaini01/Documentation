@@ -9,7 +9,7 @@
 
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  28-07-2025        | V 1.0            |     29-07-2025    |  Prashant          |  -      |     -   |   - |
+| Abhishek saini  |  28-07-2025        | V 1.0            |       |  Prashant          |  -      |     -   |   - |
 
 ---
   
@@ -18,7 +18,7 @@
 - [Why DNS ](#why-dns)
 - [What is DNS ](#what-is-dns)
 - [Types of records](#types-of-records)
-- [How it is work ](#how-it-is-work)
+- [How DNS works ](#how-dns-works)
 - [ How To Get Domain](#how-to-get-domain)
 - [Different DNS provider](#different-dns-provider)
 - [DNS Providers Comparison](#dns-providers-comparison)
@@ -82,7 +82,7 @@ These servers have the exact address of the website. They give the final answer 
 
 ---
 
-### Extra Info
+### Note:
 
 - The resolver saves answers it finds for some time to help next requests faster.  
 - The resolver can either do all the asking itself or ask you to check some servers step-by-step.  
@@ -99,7 +99,7 @@ These servers have the exact address of the website. They give the final answer 
 | [Domain](123) |POC of Domain name system.| 
 
 ---
-## Different DNS provider
+## Different DNS Provider
 
 | DNS Providers       | Description                                                     |
 |---------------------|-----------------------------------------------------------------|
