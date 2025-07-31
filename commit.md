@@ -1,8 +1,7 @@
 # Recommendations of Commit Hooks 
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/071536d8-7b76-4cb5-abd1-13c90d3f8acd" width="500" height="300" />
-</p>
+
+<img width="800" height="400" alt="123" src="https://github.com/user-attachments/assets/690e6d96-160c-4f5d-952d-a3c51e08e109" />
 
 ---
 
@@ -22,23 +21,22 @@ This document explains the different types of commit hooks, how they work, and w
 ---
 
 ## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Types of Commit Hooks Overview](#types-of-commit-hooks-overview)
-   - [Client-Side Commit Hooks](#client-side-commit-hooks)
-   - [Server-Side Commit Hooks](#server-side-commit-hooks)
-3. [Recommendations for Using Hooks](#recommendations-for-using-hooks)
+- [Introduction](#introduction)
+- [Types of Commit Hooks Overview](#types-of-commit-hooks-overview)
+- [Recommendations for Using Hooks](#recommendations-for-using-hooks)
    - [Pre-Commit Hook](#pre-commit-hook)
    - [Post-Commit Hook](#post-commit-hooks)
-4. [Conclusion](#conclusion)
-5. [Contact Information](#contact-information)
-6. [References](#references)
+   - [Commit-msg Hook](#commit-msg-hook)
+- [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
+- [References](#references)
    
 ## Introduction
 Commit hooks are Git hooks triggered during the commit process to enforce code quality and standards. They check code formatting, validate commit messages, detect sensitive data, run tests, and ensure compliance. Integrating commit hooks helps catch errors early, reduces manual reviews, and maintains code integrity.
 
 ## Types of Commit Hooks Overview
-![image](https://github.com/user-attachments/assets/e1cf3d43-ac2f-40ed-9410-eb905c3046b1)
+<img width="871" height="351" alt="12" src="https://github.com/user-attachments/assets/2be3a63a-338a-4e30-bca4-a17999417150" />
+
 
 Please refer this  [link](https://github.com/Snaatak-Cloudops-Crew/documentation/blob/SCRUM-104-deepak/VCS/Commit-Hooks/Introduction/README.md) for more about commit hooks
 
@@ -57,7 +55,7 @@ A pre-commit hook helps maintain **clean and error-free code**. It checks for:
 - Basic test results  
 - Dependency issues  
 
-Using it means:
+**Using it means:**
 - Fewer bugs in the code  
 - Consistent code style  
 - Quick feedback while coding  
@@ -109,7 +107,7 @@ A commit-msg hook ensures that every commit message follows a **consistent and m
 - Generating changelogs or release notes  
 - Automating CI/CD processes
 
-Using it means:
+**Using it means:**
 - Uniform commit messages across the team  
 - Easier tracking and debugging  
 - Better integration with project management tools
@@ -143,6 +141,8 @@ By using these hooks together, teams can maintain cleaner codebases, reduce manu
 | Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
 
 ---
+
+## References
 
 | Title | Links|
 |------|---------------------|
