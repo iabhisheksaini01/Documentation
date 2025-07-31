@@ -1,12 +1,19 @@
 # Recommendations of Commit Hooks 
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/071536d8-7b76-4cb5-abd1-13c90d3f8acd" width="500" height="300" />
+</p>
+
+---
+
+
 ## Author Information
 
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
 | Abhishek saini  |  28-07-2025        | V 1.0            |       |  Prashant          |  -      |     -   |   - |
 
-![image](https://github.com/user-attachments/assets/0c9ff608-1d67-4d20-9cd9-01415c68fdaa)
+---
 
 
 ## Purpose 
@@ -90,16 +97,45 @@ This saves time, keeps the team informed, and improves collaboration.
 | Post-Commit Scripts | Runs tools that need a completed commit     | Useful for integrations or reporting         |
 
 
+### 3. Commit-msg Hook
+
+**What it does:**  
+This hook runs **after** you write a commit message but **before** the commit is finalized. It checks the message format and content.
+
+**Why use it:**  
+A commit-msg hook ensures that every commit message follows a **consistent and meaningful format**, which is helpful for:
+- Easier understanding of commit history  
+- Linking commits to issues (e.g., JIRA or GitHub)  
+- Generating changelogs or release notes  
+- Automating CI/CD processes
+
+Using it means:
+- Uniform commit messages across the team  
+- Easier tracking and debugging  
+- Better integration with project management tools
+
+**Recommended Commit-msg Checks:**
+
+| Hook Type          | What it Checks                                     | Why it’s Useful                                      |
+|--------------------|-----------------------------------------------------|------------------------------------------------------|
+| Format Validation  | Ensures message follows pattern (e.g., `type: msg`) | Keeps messages consistent for history or changelog   |
+| Issue ID Presence  | Checks for ticket ID like `SCRUM-1234:`             | Links commits to tasks or bugs in tools like JIRA    |
+| Message Length     | Enforces minimum and maximum character limits       | Avoids vague or overly long commit messages          |
+| No Empty Messages  | Blocks commits without a valid message              | Ensures commit log is always informative             |
+
+---
+
 ## Conclusion
 
-Using **pre-commit** and **post-commit** hooks is important for keeping your code clean and your development process smooth.
+Implementing Git commit hooks improves the quality, consistency, and automation of your development process.
 
-- **Pre-commit hooks** help catch issues early by checking code formatting, running linters, and basic tests. This makes sure only high-quality code is committed.
-- **Post-commit hooks** automate tasks after a commit, like sending notifications, triggering CI/CD pipelines, and updating other systems.
+- **Pre-commit hooks** catch formatting errors, linting issues, and failing tests before code enters the repository.
+- **Post-commit hooks** automate tasks like logging, notifications, and CI/CD pipeline triggers.
+- **Commit-msg hooks** ensure that commit messages follow a standard format and include necessary details like ticket IDs.
 
-Together, they improve code quality, save time, and support better teamwork.
+By using these hooks together, teams can maintain cleaner codebases, reduce manual review effort, and enforce best practices automatically.
 
-
+---
 ## Contact Information
 
 | **Name**           | **Email address**                         |
