@@ -1,16 +1,18 @@
 # Recommendations of Commit Hooks 
 
-  ## Author Information 
+## Author Information
 
-| **Created** | **Version** | **Last Modified** | **Author**            | **Level**         | **Reviewer** |
-|-------------|-------------|-------------------|------------------------|-------------------|--------------|
-| 02-05-2025  | V1          | 02-05-2025         | Harsh Wardhan Singh    | Internal review   | Pritam       |
-|
+| Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
+|-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
+| Abhishek saini  |  28-07-2025        | V 1.0            |       |  Prashant          |  -      |     -   |   - |
+
 ![image](https://github.com/user-attachments/assets/0c9ff608-1d67-4d20-9cd9-01415c68fdaa)
 
 
 ## Purpose 
-This document aims to provide a comprehensive discussion on various types of commit hooks, highlighting their differences and recommending specific hooks based on their effectiveness and use cases. By understanding the unique purposes and functionalities of each commit hook, readers will gain insights into why certain hooks are recommended over others, ultimately aiding in the selection of the most suitable commit hooks for their development workflows.
+This document explains the different types of commit hooks, how they work, and when to use them. It also gives recommendations on which commit hooks are most useful. By reading this, you will understand which commit hooks are best for your project and why they matter in the development process.
+
+---
 
 ## Table of Contents
 
@@ -31,53 +33,78 @@ Commit hooks are Git hooks triggered during the commit process to enforce code q
 ## Types of Commit Hooks Overview
 ![image](https://github.com/user-attachments/assets/e1cf3d43-ac2f-40ed-9410-eb905c3046b1)
 
-Please refer this  [link]() for more about commit hooks
-
-### Recommendations for Using Hooks
-
-1. ### Pre-Commit Hook
-
-**Purpose:** The pre-commit hook runs before the commit is created. It is designed to check the code quality before the commit is finalized.
-
-**Why Choose Pre-commit Hook:**
-
-A pre-commit hook ensures high code quality by running checks like **formatting, linting**, and **basic tests** before a commit. It helps **prevent errors** and **style issues**, provides **immediate feedback** to developers, and ensures that only code meeting quality standards is committed, leading to a cleaner, more reliable codebase.
-
-**Essential pre-commit git hooks:**
-| Hook Type           | Purpose                                             | Benefits                                                            |
-|---------------------|------------------------------------------------------|--------------------------------------------------------------------|
-| Code Formatting     | Automatically format code to adhere to style guidelines. | Ensures consistent code style, reducing formatting errors.|
-| Linting         | Check for potential issues or coding errors.| Identifies and fixes potential issues before they are committed.|
-|Basic Tests|Execute basic tests to verify code functionality.|Prevents committing code that fails existing tests.|
-|Dependency Checks|Ensure all dependencies are properly defined and updated.|Avoids issues related to missing or outdated dependencies.|
-
-
-2. ### Post-Commit Hook
-
-**Purpose:** The post-commit hook runs after the commit is successfully created. It is used for tasks that are better handled after the commit is finalized.
-
-**Why Choose Post-commit Hook:**
-
-A post-commit hook automates tasks after a successful commit, such as **sending notifications**, **triggering deployment pipelines**, **logging commit details**, and **updating external systems**. It streamlines development,**enhances efficiency**, and **improves team collaboration** by handling tasks that rely on the commit being finalized.
-
-**Essential post-commit git hooks:**
-| Hook Type           | Purpose                                             | Benefits                                                            |
-|---------------------|------------------------------------------------------|--------------------------------------------------|
-| Notifications     | Sends alerts or messages about recent commits to team members.| EKeeps the team informed about changes and updates.|
-| Log Management        | Records commit details in logs for auditing and tracking purposes.| Provides historical context and traceability for commits.|
-|CI/CD Triggers|Initiates continuous integration or deployment processes.|Automatically builds and deploys code after a commit.|
-|Post-commit Actions|Executes additional scripts or tools that require a finalized commit.|Allows for complex actions or integrations post-commit.|
-
-## Conclusion
-Implementing pre-commit and post-commit hooks is crucial for maintaining high code quality and efficient development workflows. Pre-commit hooks focus on code formatting, linting, and running tests to ensure that only high-quality code gets committed. Post-commit hooks handle automation tasks such as triggering CI/CD pipelines, sending notifications, and updating external systems.
-
+Please refer this  [link](https://github.com/Snaatak-Cloudops-Crew/documentation/blob/SCRUM-104-deepak/VCS/Commit-Hooks/Introduction/README.md) for more about commit hooks
 
 ---
+### Recommendations for Using Hooks
+
+### 1. Pre-Commit Hook
+
+**What it does:**  
+This hook runs **before** a commit is made. It checks your code to catch any problems early.
+
+**Why use it:**  
+A pre-commit hook helps maintain **clean and error-free code**. It checks for:
+- Proper formatting  
+- Coding mistakes (linting)  
+- Basic test results  
+- Dependency issues  
+
+Using it means:
+- Fewer bugs in the code  
+- Consistent code style  
+- Quick feedback while coding  
+
+**Recommended Pre-Commit Checks:**
+
+| Hook Type         | What it Checks                            | Why it’s Useful                                 |
+|-------------------|--------------------------------------------|-------------------------------------------------|
+| Code Formatting   | Formats code to follow team style          | Keeps code clean and consistent                 |
+| Linting           | Looks for possible coding errors           | Catches issues before they go into the codebase |
+| Basic Tests       | Runs small tests to check if code works    | Blocks broken code from being committed         |
+| Dependency Checks | Verifies required packages or libraries    | Avoids missing or outdated package problems     |
+
+---
+
+### 2. Post-Commit Hook
+
+**What it does:**  
+This hook runs **after** a commit is successfully made. It handles follow-up tasks.
+
+**Why use it:**  
+A post-commit hook helps **automate tasks** like:
+- Sending notifications  
+- Logging changes  
+- Starting CI/CD pipelines  
+- Running scripts that depend on the commit  
+
+This saves time, keeps the team informed, and improves collaboration.
+
+**Recommended Post-Commit Tasks:**
+
+| Hook Type           | What it Does                               | Why it’s Useful                              |
+|---------------------|---------------------------------------------|----------------------------------------------|
+| Notifications       | Sends commit info to team channels          | Keeps everyone up-to-date                    |
+| Log Management      | Adds commit info to logs                    | Helps track changes and history              |
+| CI/CD Triggers      | Starts build/deploy pipelines               | Automates testing and deployment             |
+| Post-Commit Scripts | Runs tools that need a completed commit     | Useful for integrations or reporting         |
+
+
+## Conclusion
+
+Using **pre-commit** and **post-commit** hooks is important for keeping your code clean and your development process smooth.
+
+- **Pre-commit hooks** help catch issues early by checking code formatting, running linters, and basic tests. This makes sure only high-quality code is committed.
+- **Post-commit hooks** automate tasks after a commit, like sending notifications, triggering CI/CD pipelines, and updating other systems.
+
+Together, they improve code quality, save time, and support better teamwork.
+
+
 ## Contact Information
 
-| Name| Email Address      |
-|-----|--------------------------|
-
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
 
 ---
 
