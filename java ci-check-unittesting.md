@@ -48,8 +48,18 @@ In Java, common unit testing frameworks include JUnit and TestNG. These framewor
 | **Early Bug Detection**       | Bugs are detected early in the development process, reducing the cost of fixing them later.       |
 | **Code Quality**              | Unit tests enforce a structured and well-tested codebase.                                         |
 ## Workflow Diagram
-<img src="https://github.com/user-attachments/assets/7485bb81-88f4-4828-9bce-643335771002" alt="image" width="300"/>
 
+```mermaid
+flowchart TD
+    A[Write Unit Test Cases] --> B[Write Code to be Tested]
+    B --> C[Run Unit Tests]
+    C --> D{All Tests Pass?}
+    D -- Yes --> E[Mark Build as Successful]
+    D -- No --> F[Fix Code or Test]
+    F --> C
+    E --> G[Commit & Push Code]
+    G --> H[Integration or Next Stage]
+```
 ---
 
 ## Different Tools for Unit Testing in Java
