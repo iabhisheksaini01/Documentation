@@ -1,4 +1,4 @@
-# Proof of Concept (POC) for Java Unit Testing
+## Proof of Concept (POC) for Java Unit Testing
 
 ## Author Information
 
@@ -11,25 +11,16 @@
 
 ## Table of Contents
 
-
-1. [Introduction](#introduction)
-2. [Pre-requisites](#pre-requisites)
-3. [System Requirements](#system-requirements)
-4. [Security Ports](#security-ports)
-5. [Testing Framework](#testing-framework)
-6. [Step-by-step Installation](#step-by-step-installation)
-   * [Step 1: Update System Packages](#step-1-update-system-packages)
-   * [Step 2: Install Java 17 and Maven](#step-2-install-java-17-and-maven)
-   * [Step 3: Cloning the Java Application](#step-3-cloning-the-java-application)
-   * [Step 4: Configure pom.xml](#step-4)
-     * [Add JUnit Dependency](#add-the-junit-dependency-to-pomxml)
-     * [Add Maven Compiler Plugin](#add-maven-dependency-in-pomxml)
-     * [Update Surefire Plugin](#update-surefire-plugin-configuration-in-pomxml)
-   * [Step 5: Execute Java Unit Tests](#step-5-execute-java-unit-tests)
-7. [Generate HTML Report with Surefire](#generate-html-report-with-surefire)
-8. [POC Conclusion](#poc-conclusion)
-9. [Contact Information](#contact-information)
-10. [References](#references)
+- [Introduction](#introduction)
+- [Pre-requisites](#pre-requisites)
+- [System Requirements](#system-requirements)
+- [Security Ports](#security-ports)
+- [Testing Framework](#testing-framework)
+- [Step-by-step Installation](#step-by-step-installation)
+- [Generate HTML Report with Surefire](#generate-html-report-with-surefire)
+- [POC Conclusion](#poc-conclusion)
+- [Contact Information](#contact-information)
+- References](#references)
 
 ---
 
@@ -42,7 +33,7 @@ Unit testing in Java is an essential practice for ensuring the correctness and f
 - JUnit: A necessary library for executing the unit tests.
 
 
-## System Requirements
+### System Requirements
 
 | **Specification**      | **Details**         |
 |-------------------------|---------------------|
@@ -51,18 +42,19 @@ Unit testing in Java is an essential practice for ensuring the correctness and f
 | **Hard Disk**             | 20 GB              |
 | **RAM**                | 4 GB               |
 
-
-## **Security Ports**
+### Security Ports
 
 | **Port** | **Use Case**                  |
 |----------|-------------------------------|
 | 22       | SSH access for remote login   |
 | 5432     | PostgreSQL database access    |
 
+---
+
 ## Testing Framework
 Java unit testing is facilitated by various testing frameworks, with JUnit being one of the most widely adopted. JUnit provides a structured way to write, organize, and execute tests.
 
-Overview
+**NOTE**
 The salary microservice has pre-existing unit test cases authored by the developer, which are located in the following directory path:
 
 ```
@@ -142,8 +134,13 @@ mvn surefire-report:report
 ```
 Navigate to target/site to view the generated report in your browser.
 
+---
+
 ## POC Conclusion
-This Proof of Concept (POC) demonstrates the process of setting up and executing unit tests in a Java project using JUnit and Maven. By incorporating unit tests into the development lifecycle, you can ensure code reliability, early bug detection, and maintainability. Tools like Maven and JUnit, along with best practices such as isolating tests and automating the testing process, significantly improve software quality. The continuous integration setup automates the testing process, ensuring that any new changes do not break existing functionality.
+This POC shows that using JUnit and Maven for unit testing improves code reliability, detects bugs early, and ensures maintainability. Automated tests within a continuous integration setup help prevent new changes from breaking existing functionality, making the software more robust and dependable.
+
+
+---
 
 ## Contact Information
 
