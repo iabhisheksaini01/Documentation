@@ -1,5 +1,5 @@
 # Documentation of Code Compilation for GoLang
-<img width="1000" height="500" alt="1576592374" src="https://github.com/user-attachments/assets/5db06972-504e-47d9-acdf-4e4cfdc013f2" />
+<img width="700" height="300" alt="1576592374" src="https://github.com/user-attachments/assets/5db06972-504e-47d9-acdf-4e4cfdc013f2" />
 
   
 ## Author Information
@@ -12,18 +12,19 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [What is Code Compilation?](#what-is-code-compilation)
-3. [Why Compile Go Code?](#why-compile-go-code)
-4. [Workflow Diagram](#workflow-diagram)
-5. [Different Tools for Go Compilation](#different-tools-for-go-compilation)
-6. [Comparison of Compilation Tools](#comparison-of-compilation-tools)
-7. [Advantages of Go Code Compilation](#advantages-of-go-code-compilation)
-8. [Proof Of Concept (POC)](#proof-of-concept-poc)
-9. [Best Practices](#best-practices)
-10. [Conclusion](#conclusion)
-11. [Contact Information](#contact-information)
-12. [References](#references)
+- [Introduction](#introduction)
+- [What is Code Compilation?](#what-is-code-compilation)
+- [Why Compile Go Code?](#why-compile-go-code)
+- [Workflow Diagram](#workflow-diagram)
+- [Different Tools for Go Compilation](#different-tools-for-go-compilation)
+- [Comparison of Compilation Tools](#comparison-of-compilation-tools)
+- [Advantages of Go Code Compilation](#advantages-of-go-code-compilation)
+- [Proof Of Concept (POC)](#proof-of-concept-poc)
+- [Best Practices](#best-practices)
+- [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
+- [References](#references)
+
 
 ---
 
@@ -50,26 +51,19 @@ Go code is compiled to create a **binary executable**, which brings several bene
 
 **In short:** Compilation makes Go programs **fast, reliable, and easy to deploy**.
 
+---
 
 ## Workflow Diagram
+![how-golang-compiler-works_o5zmqa](https://github.com/user-attachments/assets/abd8116b-eef9-4221-8920-62e659a5fa74)
 
-```mermaid
-flowchart LR
-    A["Source Code (.go)"] --> B["Lexical Analysis"]
-    B --> C["Parsing & Syntax Analysis"]
-    C --> D["Semantic Analysis"]
-    D --> E["Intermediate Representation (IR)"]
-    E --> F["Code Generation"]
-    F --> G["Executable File"]
-    G --> H["Run 'go build/run'"]
 
-```
+- **Lexical Analysis** – Breaks the code into small pieces called tokens (keywords, variable names, symbols).  
+- **Parsing & Syntax Analysis** – Checks if the code follows proper grammar and structure.  
+- **Type Checking & Semantic Analysis** – Ensures data types are correct and finds logical mistakes.  
+- **Code Optimization** – Improves the code to make it faster and more efficient.  
+- **Code Generation** – Produces the final machine code that the computer can run.  
 
-- **Go Source:** This represents the source code written in the Go programming language. It’s the initial code that you write and save in .go files.
-  
-- **Compiler:** The compiler is a tool that translates the Go source code into machine code. Within the compiler, there’s a step labeled “asm” which stands for assembly. This step converts the high-level Go code into assembly language, a low-level representation of the code that is closer to machine language.
-  
-- **Executable Binary:** The final output of the compilation process is the executable binary. This is the machine code that the computer can directly execute. 
+---
 
 ## Different Tools for Go Compilation
 
@@ -82,17 +76,18 @@ flowchart LR
 
 ---
 
-## Comparison of Go Compilation Tools
+## Comparison of Compilation Tools
 
-| **Feature / Tool**  | **Go Compiler (gc)**                       | **gccgo**                              | **Cross-Compilation**                     | **TinyGo**                                  |
-|---------------------|-------------------------------------------|----------------------------------------|--------------------------------------------|---------------------------------------------|
-| **Type**            | Main official Go compiler                 | Go compiler built on GCC               | Building for other OS/CPU                  | Go compiler for small devices & web apps    |
-| **Main Use**        | Everyday Go code compilation              | Go with GCC features/optimizations     | Making apps for different systems          | For IoT, embedded systems, and WebAssembly  |
-| **Speed**           | Fast and optimized                        | Depends on GCC settings                | Depends on target system                   | Very small & memory-efficient               |
-| **Cross-Platform**  | Yes                                        | Yes                                    | Main feature                               | Yes                                         |
-| **Ease of Use**     | Very easy                                  | Bit complex to set up                  | Can be tricky                              | Easy for its specific uses                  |
-| **Output**          | Binary program                            | Binary program                          | Binary for chosen OS/architecture          | Binary for microcontrollers or WASM         |
-| **Community**       | Large and active                          | Smaller community                       | Good support depending on tool used        | Growing quickly                             |
+| **Feature / Tool**  | **Go Compiler (gc)**          | **gccgo**                      | **Cross-Compilation**          | **TinyGo**                     |
+|---------------------|-------------------------------|--------------------------------|--------------------------------|--------------------------------|
+| **Type**            | Official Go compiler          | GCC-based Go compiler           | Compile for other OS/CPU       | For small devices & Web apps   |
+| **Main Use**        | Regular Go programs           | Go with GCC features            | Build apps for different systems | IoT, embedded, WebAssembly    |
+| **Speed**           | Fast & optimized             | Depends on GCC                  | Depends on target system       | Very small & memory-efficient |
+| **Cross-Platform**  | Yes                           | Yes                             | Yes                            | Yes                            |
+| **Ease of Use**     | Very easy                     | Slightly complex                | Can be tricky                  | Easy for its uses              |
+| **Output**          | Binary program                | Binary program                  | Binary for chosen OS/architecture | Binary for microcontrollers/WASM |
+| **Community**       | Large & active               | Smaller                         | Depends on tool support        | Growing quickly                |
+
 
 ---
 
