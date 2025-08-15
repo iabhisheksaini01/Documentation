@@ -1,5 +1,6 @@
 # Documentation of Code Compilation for GoLang
-![golang](https://github.com/user-attachments/assets/67dd5a3c-4561-44aa-99a5-a689b3d0d352)
+<img width="1000" height="500" alt="1576592374" src="https://github.com/user-attachments/assets/5db06972-504e-47d9-acdf-4e4cfdc013f2" />
+
   
 ## Author Information
 
@@ -51,7 +52,19 @@ Go code is compiled to create a **binary executable**, which brings several bene
 
 
 ## Workflow Diagram
-![image](https://github.com/user-attachments/assets/cefdb377-0f61-4c43-afdc-596a4a9f1b55)
+
+```mermaid
+flowchart LR
+    A["Source Code (.go)"] --> B["Lexical Analysis"]
+    B --> C["Parsing & Syntax Analysis"]
+    C --> D["Semantic Analysis"]
+    D --> E["Intermediate Representation (IR)"]
+    E --> F["Code Generation"]
+    F --> G["Executable File"]
+    G --> H["Run 'go build/run'"]
+
+```
+
 - **Go Source:** This represents the source code written in the Go programming language. It’s the initial code that you write and save in .go files.
   
 - **Compiler:** The compiler is a tool that translates the Go source code into machine code. Within the compiler, there’s a step labeled “asm” which stands for assembly. This step converts the high-level Go code into assembly language, a low-level representation of the code that is closer to machine language.
