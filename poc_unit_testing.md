@@ -14,82 +14,53 @@
 - [Introduction](#introduction)
 - [Pre-requisites](#pre-requisites)
 - [System Requirements](#system-requirements)
-- [Security Ports](#security-ports)
 - [Testing Framework](#testing-framework)
 - [Step-by-step Installation](#step-by-step-installation)
 - [Generate HTML Report with Surefire](#generate-html-report-with-surefire)
 - [POC Conclusion](#poc-conclusion)
 - [Contact Information](#contact-information)
-- References](#references)
+- [References](#references)
 
 ---
 
 ## Introduction
-Unit testing in Java is an essential practice for ensuring the correctness and functionality of individual code units. In this document, we will outline the steps for setting up and executing unit tests using the JUnit framework in a typical Java project.
+Unit testing in Java ensures that each part of your code works correctly. This guide explains how to set up and run unit tests using the **JUnit** framework.
 
-## Pre-requisites 
-- Java Version 17 (as specified in pom.xml)
-- Maven: Maven simplifies dependency management and project build processes, including testing.
-- JUnit: A necessary library for executing the unit tests.
+#### NOTE:  
+ We are using **SalaryAPI** for Java Unit testing.  
 
+---
+
+## Prerequisites
+- **Java 17** – as specified in `pom.xml`
+- **Maven** – for managing dependencies and building the project
+- **JUnit** – library for writing and running unit tests
 
 ### System Requirements
 
-| **Specification**      | **Details**         |
-|-------------------------|---------------------|
-| **Operating System**    | Ubuntu 22.04      |
-| **CPU**                | 2 vCPU             |
-| **Hard Disk**             | 20 GB              |
-| **RAM**                | 4 GB               |
-
-### Security Ports
-
-| **Port** | **Use Case**                  |
-|----------|-------------------------------|
-| 22       | SSH access for remote login   |
-| 5432     | PostgreSQL database access    |
+Please refer this link [Salary DOCunmentation](https://github.com/Snaatak-Cloudops-Crew/documentation/tree/scrum-70-abhishek-saini/0T-Microservices/Applications/Salary-Api/Introduction)
 
 ---
 
 ## Testing Framework
-Java unit testing is facilitated by various testing frameworks, with JUnit being one of the most widely adopted. JUnit provides a structured way to write, organize, and execute tests.
 
-**NOTE**
-The salary microservice has pre-existing unit test cases authored by the developer, which are located in the following directory path:
+Unit testing checks if individual parts of your Java code work correctly. **JUnit** is a widely used and popular framework for Java unit testing, and we are using it in this project to write, organize, and run our tests efficiently.
 
-```
-src/test/java/com/opstree/microservice/salary
-```
+#### Note
+The **salary microservice** already has unit tests written by the developer:
+
+---
 
 ## **Step-by-step Installation**
-
-> **NOTE:**   
-> We are using **SalaryAPI** for Java Unit testing.  
-> Refer to the official POC documentation for complete steps: [Salary API POC]()
-
- ### **Step 1. Update System Packages**
-
->
->  **Update system**  
->  **Follow Step 3 here**: [System update Commands](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md#1-basic-system-commands)
->
-> 
-
-### Step 2. Install Java 17 and Maven
-Since the salary codebase relies on Java 17, it is essential to install the correct version of Java and Maven for managing project dependencies.
-- ![image](https://github.com/user-attachments/assets/b98f2a5f-7631-4783-b560-30bc0af5eb82)
-- ![image](https://github.com/user-attachments/assets/487be602-13cd-451a-98dc-57e2201bfb0e)
+ 
+> For complete steps, refer to the official POC documentation: [Salary API POC](https://github.com/Snaatak-Cloudops-Crew/documentation/blob/SCRUM-69-deepak/OT-Microservices/Applications/Salary-API/POC/README.md)
 
 
-### Step 2. Cloning the Java Application
-![image](https://github.com/user-attachments/assets/e1ccbba5-2cb1-4b21-ba6d-8cc1c0894570)
+### Step 1. Clean the project
+#### This removes any previously compiled files or cached test results.
+<img width="725" height="342" alt="Screenshot from 2025-08-15 11-55-50" src="https://github.com/user-attachments/assets/07b2512e-ccb8-4420-871f-479e635fe38d" />
 
-### Step 3. Clean the project
-- This removes any previously compiled files or cached test results.
-
-![Screenshot 2025-05-21 194207](https://github.com/user-attachments/assets/fa5abc47-b0f2-4ba7-8616-ef9e12e7bdd5)
-
-### Step 4. 
+### Step 2. 
 
 #### Add the JUnit Dependency to ```pom.xml```
 Ensure that the JUnit dependency is added to your ```pom.xml``` file:
