@@ -60,7 +60,17 @@ Dynamic Application Security Testing (DAST) is a method to find security weaknes
 
 ## Workflow of DAST
 
- ![image](https://xebia.com/wp-content/uploads/2023/02/HowDastWorks-1024x386.png.webp)
+```mermaid
+flowchart TD
+    A[Deploy Java Application] --> B[Configure DAST Tool]
+    B --> C[Crawl / Explore Application]
+    C --> D[Simulate Attacks / Inject Payloads]
+    D --> E[Analyze Results & Generate Report]
+    E --> F[Fix Vulnerabilities in Java Code]
+    F --> G[Retest Application]
+    G --> H[Integrate DAST in CI/CD Pipeline - Optional]
+
+```
 
 ---
 
@@ -97,9 +107,6 @@ Dynamic Application Security Testing (DAST) is a method to find security weaknes
 
 
 ## POC: DAST Using OWASP ZAP
-
----
->
 >Here is the Proof of Concept (PoC) document for your reference : [document](https://github.com/duggu7055/Snaatak/blob/main/Sprint2/Java-ci/poc/Readme.md)
 
 
