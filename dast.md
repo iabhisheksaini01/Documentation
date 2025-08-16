@@ -54,7 +54,6 @@ Dynamic Application Security Testing (DAST) is a method to find security weaknes
 | **Protects reputation**            | Avoids damage to company image due to security issues.                    |
 | **Reduces human errors**           | Automated testing helps catch mistakes that might be missed manually.     |
 
----
 
 ## Workflow of DAST
 
@@ -62,35 +61,39 @@ Dynamic Application Security Testing (DAST) is a method to find security weaknes
 
 ---
 
-## **Different Tools Used in DAST**
-| **Tool Name**                | **Description**                                                                 | **Features**                                                  |
-|------------------------------|---------------------------------------------------------------------------------|----------------------------------------------------------------|
-| **OWASP ZAP**                 | Open-source security testing tool.                                              | Automated scanners, vulnerability detection, active and passive scanning. |
-| **Burp Suite**                | Comprehensive platform for web application security testing.                    | Intercepting proxy, vulnerability scanning, custom extensions.   |
-| **Acunetix**                  | Automated security scanner for web applications.                                | Detects SQL injection, XSS, and other vulnerabilities.            |
-| **AppSpider**                 | Dynamic application security testing tool.                                      | Scanning for Java frameworks, automated vulnerability discovery. |
+## Different Tools Used in DAST
+
+| **Tool Name**   | **Description**                           | **Key Features**                                         |
+|-----------------|-------------------------------------------|---------------------------------------------------------|
+| **OWASP ZAP**    | Free and open-source security tool.       | Automated vulnerability scanning, active & passive tests, easy integration with CI/CD. |
+| **Burp Suite**   | Widely used web security platform.        | Intercept and analyze web traffic, vulnerability scanning, supports plugins for customization. |
+| **Acunetix**     | Commercial automated web scanner.         | Detects SQL injection, XSS, weak passwords, and other common vulnerabilities. |
+| **AppSpider**    | Enterprise DAST tool for web applications.| Scans multiple web frameworks, detects Java-specific vulnerabilities, generates detailed reports. |
 
 ---
-
 ## Tool Comparison
-| **Tool Name**   | **Cost**      | **Ease of Use** | **Features**               | **Customization**   |
-|-----------------|---------------|-----------------|----------------------------|----------------------|
-| OWASP ZAP       | Free          | Moderate        | Basic and essential scans  | High                 |
-| Burp Suite      | Expensive     | High            | Comprehensive tools        | High                 |
-| Acunetix        | Expensive     | Easy            | Broad vulnerability scans  | Moderate             |
-| AppSpider       | High          | Moderate        | Java-specific capabilities | High                 |
+
+| **Tool Name**   | **Cost**      | **Ease of Use** | **Key Features**               | **Customization**   |
+|-----------------|---------------|----------------|--------------------------------|--------------------|
+| **OWASP ZAP**   | Free          | Moderate       | Automated scans, finds common vulnerabilities | High – supports scripts and CI/CD integration |
+| **Burp Suite**  | Paid          | Easy-Moderate  | Full web security testing, intercept traffic, scan vulnerabilities | High – plugins and extensions available |
+| **Acunetix**    | Paid          | Easy           | Detects SQLi, XSS, weak passwords, broad vulnerability coverage | Moderate – limited customization |
+| **AppSpider**   | Paid/High     | Moderate       | Focused on Java apps, automated scans, detailed reports | High – supports enterprise-level customization |
+
 
 ---
 
 ## Advantages of DAST
-| **Advantage**                 | **Description**                                                              |
-|-------------------------------|------------------------------------------------------------------------------|
-| **Real-time vulnerability detection** | Identifies issues during the application’s runtime.                          |
-| **Simulates real-world attacks**       | Mimics hacker techniques to expose weaknesses.                              |
-| **Supports CI/CD integration**         | Integrates with pipelines to ensure ongoing security.                      |
-| **Risk reduction**                     | Reduces the likelihood of breaches and ensures compliance with standards.  |
 
-## **POC: DAST Using OWASP ZAP**
+| **Advantage**                 | **Description**                                                             |
+|-------------------------------|-----------------------------------------------------------------------------|
+| **Detects vulnerabilities at runtime** | Finds security issues while the application is running.                 |
+| **Simulates real attacks**            | Tests the app like a hacker would to reveal weaknesses.                  |
+| **CI/CD friendly**                   | Can be integrated into pipelines for continuous security checks.        |
+| **Reduces risk**                      | Lowers chances of breaches and helps meet security standards.           |
+
+
+## POC: DAST Using OWASP ZAP
 
 ---
 >
@@ -100,18 +103,20 @@ Dynamic Application Security Testing (DAST) is a method to find security weaknes
 ---
 
 ## Best Practices
-| **Best Practice**                         | **Description**                                                                |
-|------------------------------------------|--------------------------------------------------------------------------------|
-| **Define clear testing scope**            | Ensure only relevant parts of the application are tested.                     |
-| **Integrate into CI/CD pipelines**        | Automate security testing for consistent evaluations.                         |
-| **Regularly update tools**                | Use the latest updates to address emerging threats.                           |
-| **Test in staging environments**          | Avoid disrupting production with security scans.                              |
-| **Combine with other AST techniques**     | Use SAST and IAST along with DAST for comprehensive security coverage.        |
+
+| **Best Practice**                 | **Description**                                                        |
+|----------------------------------|------------------------------------------------------------------------|
+| **Set clear testing scope**       | Focus testing only on relevant parts of the application.              |
+| **Integrate with CI/CD**          | Automate security checks for consistent and continuous testing.       |
+| **Keep tools updated**            | Use the latest versions to handle new vulnerabilities.                |
+| **Test in staging environments**  | Run scans on non-production environments to avoid downtime.           |
+| **Combine with other AST methods**| Use SAST and IAST along with DAST for full security coverage.         |
 
 ---
 
 ## Recommendation and Conclusion
-For this project, **OWASP ZAP** is recommended due to its open-source nature, extensive community support, and suitability for Java applications. Its features and cost-effectiveness make it an ideal choice for initial and ongoing security testing.
+
+**OWASP ZAP** is a strong choice for DAST because it is free, open-source, and supported by a large community. It works well with Java applications and provides essential security testing features, making it suitable for both initial assessments and continuous testing.
 
 ---
 
@@ -124,8 +129,10 @@ For this project, **OWASP ZAP** is recommended due to its open-source nature, ex
 
 ---
 
-## **References**
+## References
+
 | **Link** | **Description** |
-|------------------------------------------------------|------------------|
-| https://www.ibm.com/topics/dynamic-application-security-testing| DAST and types |
-| https://www.techmagic.co/blog/dast| DAST tool |
+|----------|-----------------|
+| [Black Duck - What is DAST?](https://www.blackduck.com/glossary/what-is-dast.html) | Overview of DAST and how it works |
+| [OWASP - Dynamic Application Security Testing](https://owasp.org/www-project-devsecops-guideline/latest/02b-Dynamic-Application-Security-Testing) | Detailed explanation of DAST and its black-box testing approach |
+
