@@ -1,6 +1,9 @@
-## Documentation and POC of DAST (Dynamic Application Security Testing) in Java CI Checks
+## Documentation of DAST (Dynamic Application Security Testing) in Java CI Checks
 
-![image](https://github.com/user-attachments/assets/4aa0c132-1fbb-45bc-ad5f-2a631586676a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/59c8d98d-eba7-4899-9c5b-60efca18185b" width="800" height="600" />
+</p>
+
 
 ---
   
