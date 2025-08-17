@@ -71,20 +71,20 @@ zaproxy
 ### Step 4: Enter the API URL
 > Input the URL of the API or web application you want to test in the 'Attack' field of OWASP ZAP.  
 > This tells ZAP which target to scan for vulnerabilities.
+<img width="1141" height="691" alt="Screenshot from 2025-08-17 22-19-49" src="https://github.com/user-attachments/assets/6ee88a71-fbb9-44ca-af56-b48fa09b0d0c" />
 
 
 ### Step 5: Wait for Results
 > Allow the scan to complete.  
 > The time taken will depend on the complexity of the target application or API.
 
-![image](https://github.com/duggu7055/Snaatak/blob/main/imgs/z3.PNG?raw=true)
+<img width="1383" height="305" alt="Screenshot from 2025-08-18 00-27-39" src="https://github.com/user-attachments/assets/b8a8e1f9-9fcb-4e54-afdf-91a7c9365b23" />
 
 
-### Step 6: View Results
-
-Review the detailed findings provided by OWASP ZAP:
-![image](https://github.com/user-attachments/assets/3fac393c-5c80-4bfb-af4e-58c12c0d3096)
-
+### Step 6: Generate Report
+> After the scan, go to **Report → Generate HTML Report**, choose a filename (e.g., `~/2025-08-18-ZAP-Report/zap_report.html`), click **Save**, and open it in a browser to view results.
+<img width="1414" height="794" alt="Screenshot from 2025-08-18 00-32-56" src="https://github.com/user-attachments/assets/b43f3119-7f0e-43d8-9ef2-60e7ce3699fd" />
+<img width="1246" height="1048" alt="Screenshot from 2025-08-18 00-22-43" src="https://github.com/user-attachments/assets/338bac6e-3c7e-4ee0-bc7c-6e58e15eb7d2" />
 
 ---
 
