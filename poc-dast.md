@@ -1,11 +1,6 @@
 # DAST Using OWASP ZAP
 
----
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/eff63252-035b-4517-bda6-cca9578d4366" width="800" height="450" alt="resize" />
-</p>
-
+![1651183851472](https://github.com/user-attachments/assets/67632032-2160-4dea-bce6-70816c5ad9e6)
 
 ---
 
@@ -16,28 +11,21 @@
 | Abhishek saini  |  12-08-2025        | V 1.0            |    |  Prashant          |  -      |      -  |  - |
 
 ---
-
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Prerequisites](#prerequisites)
-3. [Step-by-Step Installation Guide](#step-by-step-installation-guide)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [OWASP ZAP: Step-by-Step Installation and API Testing Guide](#owasp-zap-step-by-step-installation-and-api-testing-guide)
+- [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
+- [References](#references)
 
-   * [Step 1: Update Your OS](#step-1-update-your-os)
-   * [Step 2: Install OWASP ZAP](#step-2-install-owasp-zap)
-   * [Step 3: Launch OWASP ZAP](#step-3-launch-owasp-zap)
-   * [Step 4: Enter the API URL](#step-4-enter-the-api-url)
-   * [Step 5: Wait for Results](#step-5-wait-for-results)
-   * [Step 6: View Results](#step-6-view-results)
-   * [Step 7: Generate Report](#step-7-generate-report)
-4. [Conclusion](#conclusion)
-5. [Contact Information](#contact-information)
-6. [References](#references)
 
 ## Introduction
 
 This guide provides a concise walkthrough for setting up and using OWASP ZAP for identifying vulnerabilities in web applications and APIs. It covers installation, usage, and reporting to help you secure your applications effectively.
 
+---
 ## Prerequisites
 
 | Requirement            | Description                                  |
@@ -48,57 +36,49 @@ This guide provides a concise walkthrough for setting up and using OWASP ZAP for
 
 ---
 
-## Step-by-Step Installation Guide
+## OWASP ZAP: Step-by-Step Installation and API Testing Guide
 
-# Step-by-Step Installation Guide for OWASP ZAP
 
-## Step 1: Update Your OS
+### Step 1: Update Your OS
 > Before installing OWASP ZAP, ensure your system is up-to-date. Updating your OS ensures that all dependencies and libraries required by ZAP are current, minimizing compatibility issues.
 
-Run the following command on Ubuntu:
-
+##### Run the following command on Ubuntu:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
-
 ### Step 2: Install OWASP ZAP
+> After updating your OS, install OWASP ZAP, a web security testing tool, using Snap.
 
-Install OWASP ZAP using Snap:
-
+##### Run the following command on Ubuntu:
 ```bash
 sudo snap install zaproxy --classic
 ```
+<img width="679" height="328" alt="Screenshot from 2025-08-17 20-50-20" src="https://github.com/user-attachments/assets/6ca3af0a-bc58-48b3-8a0d-1bfa5e837dc8" />
 
-![image](https://github.com/duggu7055/Snaatak/blob/main/imgs/z4.PNG?raw=true)
 
 ---
-
 ### Step 3: Launch OWASP ZAP
+> Start OWASP ZAP to begin testing your web application or API.
 
-Launch the application using the following command:
-
+##### Run the following command on Ubuntu:
 ```bash
 zaproxy
 ```
-
-Ensure that your application or API is running before starting the scan.
-![image](https://github.com/duggu7055/Snaatak/blob/main/imgs/z5.PNG?raw=true)
+<img width="1050" height="535" alt="Screenshot from 2025-08-17 20-52-30" src="https://github.com/user-attachments/assets/5fcd758e-fbfe-45be-a249-11dc4b8802c4" />
 
 ---
 
 ### Step 4: Enter the API URL
+> Input the URL of the API or web application you want to test in the 'Attack' field of OWASP ZAP.  
+> This tells ZAP which target to scan for vulnerabilities.
 
-Enter the URL of the API you want to scan into the 'Attack' input field:
-![image](https://github.com/duggu7055/Snaatak/blob/main/imgs/z1.PNG?raw=true)
-
----
 
 ### Step 5: Wait for Results
+> Allow the scan to complete.  
+> The time taken will depend on the complexity of the target application or API.
 
-Allow the scan to complete. The time taken will depend on the complexity of the target application or API.
 ![image](https://github.com/duggu7055/Snaatak/blob/main/imgs/z3.PNG?raw=true)
 
----
 
 ### Step 6: View Results
 
