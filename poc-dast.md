@@ -11,8 +11,6 @@
 
 ## Author Information
 
-## Author Information
-
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
 | Abhishek saini  |  12-08-2025        | V 1.0            |    |  Prashant          |  -      |      -  |  - |
@@ -42,8 +40,6 @@ This guide provides a concise walkthrough for setting up and using OWASP ZAP for
 
 ## Prerequisites
 
-## Requirements
-
 | Requirement            | Description                                  |
 |-------------------------|----------------------------------------------|
 | **Java**               | Minimum version: Java 17                    |
@@ -54,12 +50,16 @@ This guide provides a concise walkthrough for setting up and using OWASP ZAP for
 
 ## Step-by-Step Installation Guide
 
-### Step 1: Update Your OS
+# Step-by-Step Installation Guide for OWASP ZAP
 
-> Before installing OWASP ZAP, ensure your system is up-to-date:
->Follow the [STEP 3](https://github.com/snaatak-Downtime-Crew/Documentation/blob/main/common_stack/operating_system/ubuntu/sop/commoncommands/README.md) here.
+## Step 1: Update Your OS
+> Before installing OWASP ZAP, ensure your system is up-to-date. Updating your OS ensures that all dependencies and libraries required by ZAP are current, minimizing compatibility issues.
 
----
+Run the following command on Ubuntu:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
 
 ### Step 2: Install OWASP ZAP
 
@@ -105,29 +105,26 @@ Allow the scan to complete. The time taken will depend on the complexity of the 
 Review the detailed findings provided by OWASP ZAP:
 ![image](https://github.com/user-attachments/assets/3fac393c-5c80-4bfb-af4e-58c12c0d3096)
 
+
 ---
-
-
 
 ## Conclusion
 
-OWASP ZAP provides a powerful, user-friendly tool for dynamic application security testing (DAST). By following this guide, you can effectively identify vulnerabilities in your application or API and enhance its security posture.
+OWASP ZAP is an easy-to-use tool that helps find security issues in your application or API and improve its overall safety.
 
 ---
 
-## **Contact Information**
-| **Name**           | **Email Address**                              |
-|---------------------|-----------------------------------------------|
-| Durgesh Sharma      | durgesh.sharma.snaatak@mygurukulam.co         |
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
 
 ---
-
-
 
 ## References
 
 | Topic                       | Link                                                                                 |
 |-----------------------------|--------------------------------------------------------------------------------------|
-| **OWASP ZAP Documentation** | [OWASP ZAP Official Documentation](https://www.zaproxy.org/docs/)                   |
-| **Java ci  tools**      | [Documentation]([https://snapcraft.io/docs](https://github.com/duggu7055/Snaatak/blob/main/Sprint2/Java-ci/doc/Readme.md))                                     |
+| **OWASP ZAP Documentation** | [OWASP ZAP Official Documentation](https://www.zaproxy.org/docs/)                   |                               |
 
