@@ -38,13 +38,8 @@ It ensures idempotency and can be reused across multiple environments.
 ---
 
 
-## Role Purpose
-This role handles:
+##  Purpose
 
-- Installing the specified ScyllaDB version  
-- Configuring ScyllaDB settings (`scylla.yaml`)  
-- Managing the ScyllaDB service lifecycle (start, stop, restart)  
-- Verifying that ScyllaDB service is running  
 
 ---
 
@@ -88,7 +83,7 @@ This guide demonstrates how to automate the setup of ScyllaDB in a development e
 | Description | Source |
 | ---- | -------------- |
 |  Setting up Ansible AWS Dynamic Inventory | **[Link](https://devopscube.com/setup-ansible-aws-dynamic-inventory/)** |
-|  ScyllaDB-Manual Setup | **[Link](https://github.com/avengers-p7/Documentation/tree/main/OT%20Micro%20Services/Software/ScyllaDB)** |
-| [ScyllaDB Installation Guide](https://opensource.docs.scylladb.com/stable/getting-started/install-scylla/install-on-linux.html) | Comprehensive guide for installing ScyllaDB on Linux. |
-| [ScyllaDB Configuration Guide](https://www.scylladb.com/download/?platform=ubuntu-22.04&version=scylla-5.2#open-source) | Step-by-step instructions for configuring ScyllaDB. |
-| [Documentation Template](https://github.com/OT-MICROSERVICES/documentation-template/wiki/Software-Template) | Format inspiration for the document obtained from this repository. |
+|  ScyllaDB-Manual Setup | **[Link](https://docs.scylladb.com/manual/master/getting-started/install-scylla/index.html)** |
+| [ScyllaDB Installation Guide]**[Link](https://docs.scylladb.com/manual/master/using-scylla/integrations/integration-ansible.html)**|
+
+
