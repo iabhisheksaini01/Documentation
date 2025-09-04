@@ -32,16 +32,16 @@
 
 ## Introduction 
 
-The **ScyllaDB Ansible Role** is designed to automate the deployment, configuration, and management of ScyllaDB clusters across Linux servers.  
-It ensures idempotency and can be reused across multiple environments. 
+The **ScyllaDB Ansible Role** automates the installation and configuration of ScyllaDB nodes and clusters.  
+It handles package setup, configuration files, cluster bootstrapping, and service management, ensuring consistent and repeatable deployments across environments
 
 ---
 
+## Purpose
 
-##  Purpose
+The purpose of this document is to provide a clear reference for deploying and managing ScyllaDB using Ansible.  
+It explains the role structure, variables, tasks, and usage examples, enabling teams to achieve consistent, automated, and error-free ScyllaDB setups across different environments.
 
-
----
 
 
 ## Directory Structure
@@ -62,11 +62,92 @@ It ensures idempotency and can be reused across multiple environments.
 
 ---
 
+## File/Folder Structure Description
+
+This role follows the standard Ansible role layout, with each component dedicated to a specific aspect of ScyllaDB deployment and configuration.
+
+### **defaults/main.yml**
+- Provides default configuration parameters for ScyllaDB.  
+- These values apply to all environments unless explicitly overridden.  
+- Typical defaults:
+  - `scylla_version: 6.0`  
+  - `scylla_service: scylla-server`  
+  - `scylla_data_dir: /var/lib/scylla`  
+
+---
+
+### **vars/main.yml**
+- Stores environment-specific or cluster-level variables.  
+- Higher precedence than `defaults/`.  
+- Example variables:
+  - `scylla_cluster_name: production-cluster`  
+  - `seed_nodes: ["10.0.0.1", "10.0.0.2"]`  
+  - `listen_address: "{{ ansible_host }}"`  
+  - `rpc_address: 0.0.0.0`  
+
+---
+
+### **tasks/main.yml**
+- Defines the main workflow for ScyllaDB installation and configuration.  
+- Key responsibilities:
+  1. Configure ScyllaDB package repositories.  
+  2. Install `scylla` and `scylla-tools`.  
+  3. Generate `/etc/scylla/scylla.yaml` from templates.  
+  4. Apply tuning via `scylla_setup`.  
+  5. Enable and start the `scylla-server` service.  
+  6. Validate cluster membership with `nodetool status`.  
+
+---
+
+### **handlers/main.yml**
+- Contains handlers that are triggered by task notifications.  
+- Used primarily for:
+  - Restarting `scylla-server` when configuration changes.  
+  - Reloading systemd if unit definitions are updated.  
+
+---
+
+### **templates/**  
+- Holds Jinja2 templates for dynamic configuration files.  
+- Typical templates:
+  - `scylla.yaml.j2` → core ScyllaDB configuration (cluster, seeds, addresses).  
+  - `scylla-env.sh.j2` → environment and JVM tuning settings.  
+  - `scylla-server.service.j2` → optional systemd unit customization.  
+
+---
+
+### **files/**  
+- Stores static files required by the role.  
+- Examples:
+  - Repository GPG keys.  
+  - Pre-defined `cassandra-rackdc.properties` for rack/DC awareness.  
+  - Helper scripts used during deployment.  
+
+---
+
+### **meta/main.yml**
+- Provides metadata about the role.  
+- Declares:
+  - Supported platforms (Ubuntu 20.04+, CentOS 7/8).  
+  - Minimum Ansible version required.  
+  - Dependencies on other roles, if any.  
+
+---
+
+### **tests/**  
+- Contains test cases to validate the role.  
+- Typically includes:
+  - `test.yml` → sample playbook for installing ScyllaDB with defaults.  
+  - `inventory` → example host inventory for Scylla nodes.  
 
 
-# Conclusion
+---
 
-This guide demonstrates how to automate the setup of ScyllaDB in a development environment using Ansible. By following these steps, you can efficiently provision and configure ScyllaDB on your AWS infrastructure.
+## Conclusion
+
+This Ansible role simplifies the deployment and management of ScyllaDB by automating installation, configuration, and cluster setup.  
+By using this role, teams can ensure reliable, consistent, and repeatable ScyllaDB environments across development, staging, and production.
+
 
 ---
 
