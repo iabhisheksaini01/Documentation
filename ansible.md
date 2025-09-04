@@ -8,7 +8,7 @@
 
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  11-08-2025        | V 1.0            |       |  Prashant          |  -      |     -   |   - |
+| Abhishek saini  |  03-09-2025        | V 1.0            |       |  Prashant          |  -      |     -   |   - |
 
 
 ---
@@ -42,7 +42,7 @@ It handles package setup, configuration files, cluster bootstrapping, and servic
 The purpose of this document is to provide a clear reference for deploying and managing ScyllaDB using Ansible.  
 It explains the role structure, variables, tasks, and usage examples, enabling teams to achieve consistent, automated, and error-free ScyllaDB setups across different environments.
 
-
+---
 
 ## Directory Structure
 
@@ -51,14 +51,14 @@ It explains the role structure, variables, tasks, and usage examples, enabling t
 ---
 
 ## File/Folder Overview
-- **defaults/main.yml:** Contains default variables for the role.  
-- **vars/main.yml:** Holds environment- or host-specific variables.  
-- **tasks/main.yml:** Core tasks for installation, configuration, and validation.  
-- **handlers/main.yml:** Defines actions like service restart triggered by tasks.  
-- **templates/:** Jinja2 templates for dynamic configurations.  
-- **files/:** Static files to be copied to target hosts.  
-- **meta/main.yml:** Role metadata, including dependencies.  
-- **tests/:** Sample playbooks and inventories for testing the role.
+- **defaults/main.yml**   
+- **vars/main.yml** 
+- **tasks/main.yml**  
+- **handlers/main.yml** 
+- **templates/** 
+- **files/** 
+- **meta/main.yml**
+- **tests/** 
 
 ---
 
