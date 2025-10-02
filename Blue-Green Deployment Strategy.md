@@ -53,7 +53,7 @@ This makes the new version live instantly, while the old one can still be kept a
 
 6. **Update Blue**: Once Green is stable, update Blue with the new version. Blue then becomes the standby for the next release.
 
-<img width="1600" height="1355" alt="unnamed" src="https://github.com/user-attachments/assets/2b865d52-3334-4396-8d1d-32050448e3fa" />
+<img width="1000" height="1000" alt="unnamed" src="https://github.com/user-attachments/assets/2b865d52-3334-4396-8d1d-32050448e3fa" />
 
 
 ---
@@ -97,7 +97,7 @@ This makes the new version live instantly, while the old one can still be kept a
 * Rollback is as simple as routing back to the old app.
 
 ---
-## Suitable Use Cases
+## Use Cases
 
 * **High Availability Apps**: For systems that cannot afford downtime.  
 * **Critical APIs**: When quick rollback and safe testing are needed.  
