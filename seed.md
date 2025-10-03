@@ -5,13 +5,13 @@
 
 | Created by      | Created on         | Version          | Last updated On   | pre Reviewer       | L0 Reviewer     | L1 Reviewer          |    L2 Reviewer    |
 |-----------------|--------------------|------------------|-------------------|--------------------|-----------------|----------------------|-------------------|
-| Abhishek saini  |  03-10-2025        | V 1.0            |       |  Prashant          |  Nikita     |     Rishab   |   Piyush |
+| Abhishek saini  |  03-10-2025        | V 1.0            |   03-10-2025     |  Prashant          |  Nikita     |     Rishab   |   Piyush |
 ---
 
 ## Table of Contents
 
 - [What is a Seed Job?](#what-is-a-seed-job)
-- [Why Seed Job?](#why-seed-job?) 
+- [Why Seed Job](#why-seed-job) 
 - [Purpose of the Seed Job](#purpose-of-the-seed-job)  
 - [Required Configurations](#required-configurations)  
 - [How the Seed Job Automates Job Creation](#how-the-seed-job-automates-job-creation)  
@@ -98,9 +98,11 @@ flowchart TD
 
 ##  References 
 
-| **Title**                          | **URL**  |  
-|------------------------------------|----------|  
-| Jenkins HA Setup Guide             | [Read More](https://medium.com/@priyanshigola8/setup-jenkins-ha-high-availability-with-master-slave-architecture-9b95f8b341e4) |  
-| ThinBackup Plugin Guide            | [Backup & Restore Jenkins](https://medium.com/devops-technical-notes-and-manuals/jenkins-backup-and-restore-using-plugins-guide-for-junior-devops-engineers-ffd0fd41fb8e) |
+
+| **Title**                                         | **URL**                                                                                             |
+|---------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **How To Automate Jenkins Job Configuration Using Job DSL** | [Read More](https://www.digitalocean.com/community/tutorials/how-to-automate-jenkins-job-configuration-using-job-dsl) |
+| **Sample Seed Repository for Jenkins Jobs**       | [View Repository](https://github.com/stelligent/jenkins-seed)                                       |
+| **Automated Seed Job with Generated Pipeline in Jenkins** | [Read Article](https://medium.com/@dev0611ganindu/automated-seed-job-with-generated-pipeline-in-jenkins-1add4665c458) |
 
 ---
