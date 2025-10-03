@@ -42,42 +42,37 @@ A **Seed Job** in Jenkins is a special job responsible for creating and managing
 - Enables fast rollout of new jobs by simply updating the DSL script or shared library.
 
 ---
-
 ## Required Configurations
-- **Plugins**:  
-  - Job DSL Plugin  
-  - Pipeline Plugin (if pipelines are generated)  
-  - Git Plugin (for source control integration)  
-- **Source Control Integration**:  
-  - A Git repository storing DSL scripts or library code.  
-- **Job DSL Script**:  
-  - Defines how jobs should be created (naming conventions, triggers, SCM, parameters, etc.).  
-- **Security & Access**:  
-  - Ensure only admins or DevOps engineers can modify seed job definitions.  
-- **Execution Agent**:  
-  - Must have access to required tools (e.g., Git, build tools, artifact repos).
+
+| Configuration Type      | Description                                                                                  |  Examples                          |
+|-------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------|
+| **Plugins**             | Jenkins plugins required for seed job functionality                                          | Job DSL Plugin, Pipeline Plugin, Git Plugin |
+| **Source Control**      | Repository storing DSL scripts or shared library code                                        | GitHub, GitLab, Bitbucket                  |
+| **Job DSL Script**      | Defines how jobs should be created (naming conventions, triggers, SCM, parameters, etc.)   | `.groovy` files stored in SCM              |
+| **Security & Access**   | Permissions and access control to prevent unauthorized modifications                        | Admins/DevOps only                         |
+| **Execution Agent**     | Jenkins node/agent where seed job runs; must have access to required tools                   | Git, build tools, artifact repositories   |
+
 
 ---
 
 ## How the Seed Job Automates Job Creation
-1. Seed job fetches DSL scripts or shared library code from SCM.  
-2. Jenkins Job DSL plugin parses the DSL script.  
-3. DSL instructions create/update Jenkins jobs automatically.  
-4. New jobs appear in Jenkins UI, ready for use.  
-5. Updates to the DSL scripts in SCM can be reapplied via rerunning the seed job.  
+- Seed job fetches DSL scripts or shared library code from SCM.
+- Jenkins Job DSL plugin parses the DSL script.
+- DSL instructions create/update Jenkins jobs automatically.
+- New jobs appear in Jenkins UI, ready for use.
+- Updates to the DSL scripts in SCM can be reapplied via rerunning the seed job.  
 
 ---
 
 ## Steps to Maintain or Update Seed Job
-- **Version Control**: Always update DSL scripts via Git commits.  
-- **Testing Changes**: Validate scripts locally or in a non-prod Jenkins before applying.  
-- **Updating Jobs**:  
-  - Modify DSL or shared library code.  
-  - Rerun the seed job to update existing jobs.  
-- **Monitoring**:  
-  - Review build logs of seed job for errors in DSL parsing.  
-- **Documentation**:  
-  - Keep a changelog of DSL updates.  
+
+| Step                     | Description                                                                                   | Notes / Best Practices                            |
+|--------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------|
+| **Version Control**       | Update DSL scripts or shared library via Git commits                                         | Always commit with descriptive messages         |
+| **Testing Changes**       | Validate scripts locally or in a non-prod Jenkins environment                                | Helps catch errors before affecting production  |
+| **Updating Jobs**         | Modify DSL or shared library code, then rerun the seed job                                    | Rerunning updates existing jobs automatically  |
+| **Monitoring**            | Check seed job build logs for errors or warnings                                             | Ensures job creation is successful              |
+| **Documentation**         | Maintain a changelog of updates and modifications                                           | Useful for audits and onboarding new team members |
 
 ---
 
