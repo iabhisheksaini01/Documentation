@@ -1,6 +1,6 @@
-## AWS Systems Manager (SSM) Documentation
+# AWS Systems Manager (SSM) Documentation
 
-<img width="2000" height="824" alt="ssm" src="https://github.com/user-attachments/assets/2b0055a3-ae93-4b4c-a719-0081dfbb4366" />
+<img width="1800" height="824" alt="ssm" src="https://github.com/user-attachments/assets/2b0055a3-ae93-4b4c-a719-0081dfbb4366" />
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Created by     | Created on  | Version | Last Updated On |
 |---------------|------------|---------|-----------------|
-| Abhishek Saini | 13-01-2026  | V 1.0   |      13-01-2026            |
+| Abhishek Saini | 13-01-2026  | V 1.0   |  13-01-2026   |
 
 ---
 
