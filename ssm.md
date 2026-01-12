@@ -28,15 +28,18 @@
 
 ## Introduction
 
-AWS Systems Manager (SSM) is a service that enables secure and auditable access to Amazon EC2 instances without using SSH keys, public IPs, or inbound ports.  
-It is designed to follow a **zero-trust and least-privilege security model**.
+This document provides an overview of AWS Systems Manager (SSM).  
+It explains what SSM is, why it is used, what benefits it offers, and how it is used to securely access Amazon EC2 instances.
+
+The document focuses on how SSM helps replace traditional SSH-based access with a more secure and controlled method.
+.
 
 ---
 
 ## What is AWS SSM
 
-AWS Systems Manager is a management service that allows administrators and users to manage EC2 instances using the AWS Console, CLI, or APIs.  
-Using **Session Manager**, users can open a secure terminal session directly to an EC2 instance.
+AWS Systems Manager is a service that lets you securely manage and operate EC2 instances through the AWS Console, CLI, or APIs.
+With Session Manager, users can open a secure terminal session directly to an EC2 instance without opening inbound ports or using SSH, where access is controlled by IAM and all activity is fully audited.
 
 ---
 
@@ -65,15 +68,18 @@ AWS SSM provides:
 
 ---
 
+
+
 ## How SSM Works
 
-1. The EC2 instance connects outbound to AWS SSM over HTTPS (443).
-2. The user requests access using AWS IAM.
-3. AWS verifies permissions.
-4. A secure encrypted tunnel is created.
-5. The user gets shell access.
+- The EC2 instance connects outbound to AWS SSM over HTTPS (443) using the SSM Agent.  
+- The user requests access through AWS IAM.  
+- AWS verifies the user’s permissions.  
+- AWS creates a secure, encrypted tunnel to the instance.  
+- The user gets shell access through this tunnel.  
 
-No inbound connection is required.
+No inbound ports or inbound connections are required.
+
 
 ---
 
@@ -88,28 +94,30 @@ Access can be instantly removed by updating IAM policies.
 
 ## How to Access EC2 using SSM
 
-### Step 1 – Configure EC2
-Attach IAM role: AmazonSSMManagedInstanceCore
+### Step 1 – Prepare the EC2 Instance
+Attach the IAM role: AmazonSSMManagedInstanceCore
 
-Ensure:
-- EC2 has outbound internet (NAT or IGW)
-- SSM Agent is running
-
----
-
-### Step 2 – Configure IAM User
-Create a policy that allows:
-- `ssm:StartSession`
-- Only for a specific EC2 instance
+Make sure:
+- The EC2 instance has outbound internet access (via NAT Gateway or Internet Gateway)
+- The SSM Agent is installed and running (most AWS AMIs have it pre-installed)
 
 ---
 
-### Step 3 – Connect
+### Step 2 – Configure the IAM User
+Create and attach an IAM policy that allows:
+- ssm:StartSession  
+- ssm:DescribeSessions  
+- ssm:TerminateSession  
+- Access only to the required EC2 instance (least-privilege)
+
+---
+
+### Step 3 – Connect to the Instance
 
 ```bash
 aws ssm start-session --target i-xxxxxxxx
 ```
-A secure shell session opens without SSH.
+This opens a secure terminal session to the EC2 instance through AWS, without using SSH or opening any inbound ports.
 
 ---
 
