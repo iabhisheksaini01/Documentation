@@ -29,14 +29,11 @@
 ## Introduction
 
 This document provides an overview of AWS Systems Manager (SSM).  
-It explains what SSM is, why it is used, what benefits it offers, and how it is used to securely access Amazon EC2 instances.
-
-The document focuses on how SSM helps replace traditional SSH-based access with a more secure and controlled method.
-.
+It explains what SSM is, why it is used, what benefits it offers, and how it is used to securely access Amazon EC2 instances. And how SSM helps replace traditional SSH-based access with a more secure and controlled method.
 
 ---
 
-## What is AWS SSM
+## What is AWS SSM ?
 
 AWS Systems Manager is a service that lets you securely manage and operate EC2 instances through the AWS Console, CLI, or APIs.
 With Session Manager, users can open a secure terminal session directly to an EC2 instance without opening inbound ports or using SSH, where access is controlled by IAM and all activity is fully audited.
