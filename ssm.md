@@ -108,11 +108,12 @@ Create a policy that allows:
 
 ```bash
 aws ssm start-session --target i-xxxxxxxx
+```
 A secure shell session opens without SSH.
 
 ---
 
-Security & Compliance
+## Security & Compliance
 
 | Feature        | Benefit                     |
 | -------------- | --------------------------- |
@@ -124,3 +125,16 @@ Security & Compliance
 
 
 ---
+## Contact Information
+
+| **Name**           | **Email address**                         |
+|--------------------|--------------------------------------------|
+| Abhishek saini    | abhishek.saini.snaatak@mygurukulam.co |
+
+---
+
+## References
+
+| Description                                   | References  
+| --------------------------------------------  | -------------------------------------------------|
+|SSM | https://aws.amazon.com/blogs/mt/how-to-grant-least-privilege-access-to-third-parties-on-your-private-ec2-instances-with-aws-systems-manager/ |
